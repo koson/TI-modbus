@@ -1,0 +1,2565 @@
+******************************************************************************
+                  TI ARM Linker PC v18.1.2                     
+******************************************************************************
+>> Linked Thu Nov 15 15:07:58 2018
+
+OUTPUT FILE NAME:   <outofbox_msp432e401y_MSP_EXP432E401Y_freertos_ccs.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00015615
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00100000  00017483  000e8b7d  R  X
+  SRAM                  20000000   00040000  00027011  00018fef  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00017488   00017488    r-x
+  00000000    00000000    00000208   00000208    r-- .intvecs
+  00000208    00000208    00016b3c   00016b3c    r-x .text
+  00016d44    00016d44    000005a7   000005a7    r-- .const
+  000172f0    000172f0    00000198   00000198    r-- .cinit
+20000000    20000000    00027014   00000000    rw-
+  20000000    20000000    0002642d   00000000    rw- .bss
+  20026430    20026430    00000800   00000000    rw- .stack
+  20026c30    20026c30    000003e4   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    00000208     
+                  00000000    00000208     startup_msp432e401y.obj (.intvecs:retain)
+
+.text      0    00000208    00016b3c     
+                  00000208    00000a5e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:__TI_printfi)
+                  00000c66    00000002     startup_msp432e401y.obj (.text:Default_Handler)
+                  00000c68    00000424     main_freertos.obj (.text:main)
+                  0000108c    00000390     ipv6_frag.obj (.text:ipv6ParseFragmentHeader)
+                  0000141c    00000348     tcp_fsm.obj (.text:tcpProcessSegment)
+                  00001764    00000348     tcp_timer.obj (.text:tcpTick)
+                  00001aac    00000310     dns_client.obj (.text:dnsProcessResponse)
+                  00001dbc    000002ec     tcp_misc.obj (.text:tcpSendSegment)
+                  000020a8    000002e4     ipv4_frag.obj (.text:ipv4ReassembleDatagram)
+                  0000238c    000002bc     ipv6.obj (.text:ipv6SendPacket)
+                  00002648    000002b0     nic.obj (.text:nicNotifyLinkChange)
+                  000028f8    000002a8     main_freertos.obj (.text:modbusClientTest)
+                  00002ba0    000002a8     ndp.obj (.text:ndpProcessRouterAdv)
+                  00002e48    000002a8     net.obj (.text:netTick)
+                  000030f0    000002a8     udp.obj (.text:udpProcessDatagram)
+                  00003398    00000278     slaac.obj (.text:slaacParsePrefixInfoOption)
+                  00003610    00000270     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_a)
+                  00003880    0000026c     ipv6.obj (.text:ipv6ProcessPacket)
+                  00003aec    0000025e     tcp_misc.obj (.text:tcpCheckAck)
+                  00003d4a    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.c.obj (.text:_nop)
+                  00003d4c    00000254     modbus_client_misc.obj (.text:modbusClientTransaction)
+                  00003fa0    00000248     dns_client.obj (.text:dnsResolve)
+                  000041e8    0000023c     ipv4.obj (.text:ipv4SendPacket)
+                  00004424    00000238     slaac.obj (.text:slaacDumpConfig)
+                  0000465c    00000234     tcp_misc.obj (.text:tcpNagleAlgo)
+                  00004890    00000230     dhcp_client.obj (.text:dhcpClientDumpConfig)
+                  00004ac0    00000230     ndp.obj (.text:ndpProcessNeighborAdv)
+                  00004cf0    00000224     ndp.obj (.text:ndpProcessRedirect)
+                  00004f14    00000220     ndp.obj (.text:ndpProcessNeighborSol)
+                  00005134    00000218     tcp_misc.obj (.text:tcpUpdateEvents)
+                  0000534c    000001f8     dns_client.obj (.text:dnsSendQuery)
+                  00005544    000001f0     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.text:SysCtlClockFreqSet)
+                  00005734    000001eb     ipv6.obj (.text:ipv6StringToAddr)
+                  0000591f    00000001     --HOLE-- [fill = 0]
+                  00005920    000001d4     tcp.obj (.text:tcpReceive)
+                  00005af4    000001d0     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_g)
+                  00005cc4    000001d0     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueSemaphoreTake)
+                  00005e94    000001c4     msp432e4_eth_driver.obj (.text:msp432e4EthInit)
+                  00006058    000001bc     net.obj (.text:netInit)
+                  00006214    000001b8     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueGenericSend)
+                  000063cc    000001b6     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_add_t2.asm.obj (.text)
+                  00006582    000001b6     tcp.obj (.text:tcpConnect)
+                  00006738    000001b2     tcp_misc.obj (.text:tcpSendResetSegment)
+                  000068ea    000001b2     tcp_fsm.obj (.text:tcpStateSynSent)
+                  00006a9c    000001ac     icmpv6.obj (.text:icmpv6SendErrorMessage)
+                  00006c48    000001a8     ndp.obj (.text:ndpSendNeighborAdv)
+                  00006df0    00000190     ipv4.obj (.text:ipv4SelectSourceAddr)
+                  00006f80    00000190     ndp_misc.obj (.text:ndpUpdateAddrList)
+                  00007110    0000018c     msp432e4_eth_driver.obj (.text:msp432e4EthInitDmaDesc)
+                  0000729c    00000188     ipv6_misc.obj (.text:ipv6SelectSourceAddr)
+                  00007424    00000188     tcp_fsm.obj (.text:tcpStateListen)
+                  000075ac    00000184     dhcp_client.obj (.text:dhcpClientSendRequest)
+                  00007730    00000182     net_mem.obj (.text:netBufferCopy)
+                  000078b2    00000002     os_port_freertos.obj (.text:osInitKernel)
+                  000078b4    0000017c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueReceive)
+                  00007a30    00000178                                                     : heap_4.obj (.text:pvPortMalloc)
+                  00007ba8    0000016c     ndp_cache.obj (.text:ndpUpdateNeighborCache)
+                  00007d14    0000016a     udp.obj (.text:udpSendDatagramEx)
+                  00007e7e    00000168     tcp.obj (.text:tcpSend)
+                  00007fe6    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : div0.asm.obj (.text)
+                  00007fe8    00000160     net.obj (.text:netTask)
+                  00008148    00000154     nbns_client.obj (.text:nbnsResolve)
+                  0000829c    00000150     net.obj (.text:netConfigInterface)
+                  000083ec    0000014e     icmp.obj (.text:icmpSendErrorMessage)
+                  0000853a    00000002     main_freertos.obj (.text:vApplicationMallocFailedHook)
+                  0000853c    0000014c     ethernet.obj (.text:ethProcessFrame)
+                  00008688    00000148     arp.obj (.text:arpTick)
+                  000087d0    00000142     nbns_responder.obj (.text:nbnsSendResponse)
+                  00008912    00000142     net_mem.obj (.text:netBufferSetLength)
+                  00008a54    00000140     icmpv6.obj (.text:icmpv6ProcessEchoRequest)
+                  00008b94    0000013e     ipv4_frag.obj (.text:ipv4SearchFragQueue)
+                  00008cd2    00000002     --HOLE-- [fill = 0]
+                  00008cd4    0000013c     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_e)
+                  00008e10    00000138     icmpv6.obj (.text:icmpv6ProcessMessage)
+                  00008f48    00000138     ipv6_frag.obj (.text:ipv6SearchFragQueue)
+                  00009080    00000138     nbns_client.obj (.text:nbnsProcessResponse)
+                  000091b8    00000138     ndp.obj (.text:ndpSendNeighborSol)
+                  000092f0    00000138     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:xTaskIncrementTick)
+                  00009428    00000136     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_div_t2.asm.obj (.text)
+                  0000955e    00000002     --HOLE-- [fill = 0]
+                  00009560    00000134     date_time.obj (.text:formatSystemTime)
+                  00009694    00000130     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.text:GPIOPadConfigSet)
+                  000097c4    00000130     dns_cache.obj (.text:dnsTick)
+                  000098f4    00000130     ipv6_misc.obj (.text:ipv6SetAddr)
+                  00009a24    00000130     nbns_common.obj (.text:nbnsCompareName)
+                  00009b54    0000012c     ipv6_frag.obj (.text:ipv6FragmentDatagram)
+                  00009c80    0000012c     ipv6.obj (.text:ipv6ParseOptions)
+                  00009dac    0000012a     nbns_common.obj (.text:nbnsParseName)
+                  00009ed6    00000122     tcp_misc.obj (.text:tcpUpdateSackBlocks)
+                  00009ff8    00000120     arp.obj (.text:arpProcessReply)
+                  0000a118    00000120     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:fcvt)
+                  0000a238    00000120     nbns_client.obj (.text:nbnsSendQuery)
+                  0000a358    00000120     ndp.obj (.text:ndpSendRouterSol)
+                  0000a478    0000011e     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvInitialiseNewTask)
+                  0000a596    00000002     --HOLE-- [fill = 0]
+                  0000a598    0000011c                                                     : tasks.obj (.text:xTaskResumeAll)
+                  0000a6b4    00000118     dns_common.obj (.text:dnsParseName)
+                  0000a7cc    00000118     ipv4.obj (.text:ipv4ProcessDatagram)
+                  0000a8e4    00000118     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvProcessReceivedCommands)
+                  0000a9fc    00000116     ipv4_frag.obj (.text:ipv4FragmentDatagram)
+                  0000ab12    00000116     ndp.obj (.text:ndpEnqueuePacket)
+                  0000ac28    00000114     rtsv7M4_T_le_v4SPD16_eabi.lib : fputs.c.obj (.text:fputs)
+                  0000ad3c    00000114     mld.obj (.text:mldProcessListenerQuery)
+                  0000ae50    00000110     dhcp_client.obj (.text:dhcpClientSendDiscover)
+                  0000af60    00000110     socket.obj (.text:getHostByName)
+                  0000b070    00000110     ipv6_misc.obj (.text:ipv6AddPrefix)
+                  0000b180    00000110     rtsv7M4_T_le_v4SPD16_eabi.lib : s_scalbn.c.obj (.text:scalbn)
+                  0000b290    00000110     socket.obj (.text:socketOpen)
+                  0000b3a0    00000110     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:vTaskPriorityDisinheritAfterTimeout)
+                  0000b4b0    0000010e     tcp_misc.obj (.text:tcpComputeRto)
+                  0000b5be    00000106     modbus_client.obj (.text:modbusClientConnect)
+                  0000b6c4    00000106     tcp_misc.obj (.text:tcpProcessSegmentData)
+                  0000b7ca    00000104     tcp_misc.obj (.text:tcpCheckSequenceNumber)
+                  0000b8ce    00000102     ip.obj (.text:ipCalcChecksum)
+                  0000b9d0    00000102     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueGenericSendFromISR)
+                  0000bad2    00000100     icmp.obj (.text:icmpProcessEchoRequest)
+                  0000bbd2    00000100     net_mem.obj (.text:netBufferConcat)
+                  0000bcd2    000000fc     dns_common.obj (.text:dnsCompareName)
+                  0000bdce    00000002     --HOLE-- [fill = 0]
+                  0000bdd0    000000fc     ipv6.obj (.text:ipv6AddrToString)
+                  0000becc    000000fc     msp432e4_eth_driver.obj (.text:msp432e4EthEventHandler)
+                  0000bfc8    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.asm.obj (.text)
+                  0000c0c4    000000fc     tcp_misc.obj (.text:tcpUpdateSendWindow)
+                  0000c1c0    000000f8     dhcp_client.obj (.text:dhcpClientSendDecline)
+                  0000c2b8    000000f8     ipv6_misc.obj (.text:ipv6CheckDestAddr)
+                  0000c3b0    000000f8     ethernet.obj (.text:macStringToAddr)
+                  0000c4a8    000000f8     ndp_misc.obj (.text:ndpSelectDefaultRouter)
+                  0000c5a0    000000f8     slaac.obj (.text:slaacParseRouterAdv)
+                  0000c698    000000f6     tcp_fsm.obj (.text:tcpStateFinWait1)
+                  0000c78e    000000f4     ip.obj (.text:ipCalcChecksumEx)
+                  0000c882    00000002     --HOLE-- [fill = 0]
+                  0000c884    000000f0     ethernet.obj (.text:ethCalcCrcEx)
+                  0000c974    000000ee     arp.obj (.text:arpEnqueuePacket)
+                  0000ca62    000000ee     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueGiveFromISR)
+                  0000cb50    000000ec     ipv4.obj (.text:ipv4ProcessPacket)
+                  0000cc3c    000000ec     mld.obj (.text:mldSendListenerDone)
+                  0000cd28    000000e8     mld.obj (.text:mldSendListenerReport)
+                  0000ce10    000000e8     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:xTaskPriorityInherit)
+                  0000cef8    000000e6     ethernet.obj (.text:ethSendFrame)
+                  0000cfde    00000002     --HOLE-- [fill = 0]
+                  0000cfe0    000000e4     igmp.obj (.text:igmpProcessQueryMessage)
+                  0000d0c4    000000e0     tcp_misc.obj (.text:tcpRetransmitSegment)
+                  0000d1a4    000000e0     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:xTaskPriorityDisinherit)
+                  0000d284    000000dc     ipv4.obj (.text:ipv4JoinMulticastGroup)
+                  0000d360    000000dc     ipv6.obj (.text:ipv6JoinMulticastGroup)
+                  0000d43c    000000dc     rtsv7M4_T_le_v4SPD16_eabi.lib : setvbuf.c.obj (.text:setvbuf)
+                  0000d518    000000dc     tcp_misc.obj (.text:tcpAddOption)
+                  0000d5f4    000000da     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : portasm.obj (.text)
+                  0000d6ce    000000d6     ndp.obj (.text:ndpResolve)
+                  0000d7a4    000000d4     arp.obj (.text:arpProcessPacket)
+                  0000d878    000000d4     arp.obj (.text:arpResolve)
+                  0000d94c    000000d0     rtsv7M4_T_le_v4SPD16_eabi.lib : fopen.c.obj (.text:_openfile)
+                  0000da1c    000000d0     arp.obj (.text:arpSendRequest)
+                  0000daec    000000d0     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.text:xPortStartScheduler)
+                  0000dbbc    000000cc     igmp.obj (.text:igmpLinkChangeEvent)
+                  0000dc88    000000cc     tcp_misc.obj (.text:tcpUpdateRetransmitQueue)
+                  0000dd54    000000cc     udp.obj (.text:udpReceiveDatagram)
+                  0000de20    000000ca     ipv6.obj (.text:ipv6ParseHopByHopOptHeader)
+                  0000deea    00000002     --HOLE-- [fill = 0]
+                  0000deec    000000c8     igmp.obj (.text:igmpSendReportMessage)
+                  0000dfb4    000000c8     ipv6.obj (.text:ipv6LinkChangeEvent)
+                  0000e07c    000000c4     dhcp_client.obj (.text:dhcpClientStateRebinding)
+                  0000e140    000000c4     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvAddNewTaskToReadyList)
+                  0000e204    000000c4     tcp_fsm.obj (.text:tcpStateEstablished)
+                  0000e2c8    000000c0     msp432e4_eth_driver.obj (.text:EMAC0_IRQHandler)
+                  0000e388    000000c0     nbns_common.obj (.text:nbnsEncodeName)
+                  0000e448    000000c0     tcp_misc.obj (.text:tcpUpdateReceiveWindow)
+                  0000e508    000000be     ipv4.obj (.text:ipv4StringToAddr)
+                  0000e5c6    000000be     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvCopyDataToQueue)
+                  0000e684    000000be     tcp_fsm.obj (.text:tcpStateFinWait2)
+                  0000e742    00000002     --HOLE-- [fill = 0]
+                  0000e744    000000bc     dhcp_client.obj (.text:dhcpClientStateRebooting)
+                  0000e800    000000bc     dhcp_client.obj (.text:dhcpClientStateRequesting)
+                  0000e8bc    000000bc     rtsv7M4_T_le_v4SPD16_eabi.lib : open.c.obj (.text:open)
+                  0000e978    000000bc     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : heap_4.obj (.text:prvHeapInit)
+                  0000ea34    000000ba     tcp_misc.obj (.text:tcpIsDuplicateSyn)
+                  0000eaee    00000002     --HOLE-- [fill = 0]
+                  0000eaf0    000000b8     rtsv7M4_T_le_v4SPD16_eabi.lib : add_device.c.obj (.text:add_device)
+                  0000eba8    000000b8     arp.obj (.text:arpSendProbe)
+                  0000ec60    000000b8     arp.obj (.text:arpSendReply)
+                  0000ed18    000000b8     ndp.obj (.text:ndpTick)
+                  0000edd0    000000b8     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvSwitchTimerLists)
+                  0000ee88    000000b8     socket.obj (.text:socketReceiveEx)
+                  0000ef40    000000b8     udp.obj (.text:udpInvokeRxCallback)
+                  0000eff8    000000b8     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:xQueueGenericReset)
+                  0000f0b0    000000b6     net_mem.obj (.text:netBufferRead)
+                  0000f166    000000b6     net_mem.obj (.text:netBufferWrite)
+                  0000f21c    000000b4     dns_common.obj (.text:dnsEncodeName)
+                  0000f2d0    000000b4     msp432e4_eth_driver.obj (.text:msp432e4EthReceivePacket)
+                  0000f384    000000b1     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ltostr)
+                  0000f435    00000003     --HOLE-- [fill = 0]
+                  0000f438    000000b0     dhcp_client.obj (.text:dhcpClientChangeState)
+                  0000f4e8    000000b0     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvAddCurrentTaskToDelayedList)
+                  0000f598    000000b0                                                     : tasks.obj (.text:xTaskCheckForTimeOut)
+                  0000f648    000000ae     ipv4_frag.obj (.text:ipv4FragTick)
+                  0000f6f6    000000ac     ipv6_frag.obj (.text:ipv6FragTick)
+                  0000f7a2    00000002     --HOLE-- [fill = 0]
+                  0000f7a4    000000ac     mld.obj (.text:mldLinkChangeEvent)
+                  0000f850    000000ac     tcp_fsm.obj (.text:tcpStateSynReceived)
+                  0000f8fc    000000aa     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvUnlockQueue)
+                  0000f9a6    000000a8     ipv6.obj (.text:ipv6ParseRoutingHeader)
+                  0000fa4e    00000002     --HOLE-- [fill = 0]
+                  0000fa50    000000a8     msp432e4_eth_driver.obj (.text:msp432e4EthSendPacket)
+                  0000faf8    000000a8     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : heap_4.obj (.text:prvInsertBlockIntoFreeList)
+                  0000fba0    000000a8                                                     : tasks.obj (.text:xTaskRemoveFromEventList)
+                  0000fc48    000000a4     ipv6.obj (.text:ipv6LeaveMulticastGroup)
+                  0000fcec    000000a4     ipv6.obj (.text:ipv6SetPrefix)
+                  0000fd90    000000a4     ndp_misc.obj (.text:ndpParsePrefixInfoOption)
+                  0000fe34    000000a2     mld.obj (.text:mldProcessListenerReport)
+                  0000fed6    00000002     --HOLE-- [fill = 0]
+                  0000fed8    000000a0     dhcp_client.obj (.text:dhcpClientStateRenewing)
+                  0000ff78    000000a0     ipv6_misc.obj (.text:ipv6AddDefaultRouter)
+                  00010018    000000a0     modbus_client.obj (.text:modbusClientWriteMultipleRegs)
+                  000100b8    0000009c     ipv6.obj (.text:ipv6Init)
+                  00010154    0000009c     ipv6.obj (.text:ipv6ParseDestOptHeader)
+                  000101f0    0000009c     modbus_client.obj (.text:modbusClientReadHoldingRegs)
+                  0001028c    0000009c     ndp_cache.obj (.text:ndpSendQueuedPackets)
+                  00010328    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  000103c4    0000009c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : heap_4.obj (.text:vPortFree)
+                  00010460    0000009c                                                     : tasks.obj (.text:vTaskSwitchContext)
+                  000104fc    0000009a     tcp_misc.obj (.text:tcpWriteRxBuffer)
+                  00010596    00000002     --HOLE-- [fill = 0]
+                  00010598    00000098     ethernet.obj (.text:ethCheckDestAddr)
+                  00010630    00000098     socket.obj (.text:socketConnect)
+                  000106c8    00000096     dhcp_client.obj (.text:dhcpClientTick)
+                  0001075e    00000096     rtsv7M4_T_le_v4SPD16_eabi.lib : ull_div_t2.asm.obj (.text)
+                  000107f4    00000096     tcp_misc.obj (.text:tcpGetOption)
+                  0001088a    00000002     --HOLE-- [fill = 0]
+                  0001088c    00000094     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:vTaskStartScheduler)
+                  00010920    00000092     ethernet.obj (.text:ethAcceptMacAddr)
+                  000109b2    00000092     nbns_responder.obj (.text:nbnsProcessQuery)
+                  00010a44    00000092     tcp_misc.obj (.text:tcpReadTxBuffer)
+                  00010ad6    00000090     ipv4.obj (.text:ipv4CheckDestAddr)
+                  00010b66    00000090     ipv6.obj (.text:ipv6SendDatagram)
+                  00010bf6    00000002     --HOLE-- [fill = 0]
+                  00010bf8    00000090     ipv6.obj (.text:ipv6SetDefaultRouter)
+                  00010c88    00000090     slaac.obj (.text:slaacGenerateLinkLocalAddr)
+                  00010d18    0000008e     modbus_client_pdu.obj (.text:modbusClientFormatWriteMultipleRegsReq)
+                  00010da6    0000008e     tcp_misc.obj (.text:tcpReadRxBuffer)
+                  00010e34    0000008c     modbus_client_misc.obj (.text:modbusClientCheckResp)
+                  00010ec0    0000008c     tcp.obj (.text:tcpKillOldestConnection)
+                  00010f4c    00000088     dhcp_client.obj (.text:dhcpClientStateSelecting)
+                  00010fd4    00000088     dns_cache.obj (.text:dnsFindEntry)
+                  0001105c    00000088     net.obj (.text:netGetRand)
+                  000110e4    00000088     tcp_misc.obj (.text:tcpWriteTxBuffer)
+                  0001116c    00000086     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  000111f2    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  00011278    00000086     ipv6_misc.obj (.text:ipv6GetCommonPrefixLength)
+                  000112fe    00000086     nbns_common.obj (.text:nbnsProcessMessage)
+                  00011384    00000086     tcp_fsm.obj (.text:tcpStateTimeWait)
+                  0001140a    00000084     ipv4.obj (.text:ipv4SendDatagram)
+                  0001148e    00000002     --HOLE-- [fill = 0]
+                  00011490    00000084     ndp_cache.obj (.text:ndpCreateDestCacheEntry)
+                  00011514    00000084     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvProcessTimerOrBlockTask)
+                  00011598    00000084     socket.obj (.text:socketSendTo)
+                  0001161c    00000084     tcp.obj (.text:tcpAbort)
+                  000116a0    00000084     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:xTimerGenericCommand)
+                  00011724    00000082     arp.obj (.text:arpCreateEntry)
+                  000117a6    00000082     modbus_client_pdu.obj (.text:modbusClientParseReadHoldingRegsResp)
+                  00011828    00000082     ndp_cache.obj (.text:ndpCreateNeighborCacheEntry)
+                  000118aa    00000082     nic.obj (.text:nicProcessPacket)
+                  0001192c    00000080     dhcp_common.obj (.text:dhcpAddOption)
+                  000119ac    00000080     ethernet.obj (.text:ethDropMacAddr)
+                  00011a2c    00000080     msp432e4_eth_driver.obj (.text:msp432e4EthUpdateMacAddrFilter)
+                  00011aac    00000080     socket.obj (.text:socketInit)
+                  00011b2c    0000007e     dhcp_client.obj (.text:dhcpClientStateProbing)
+                  00011baa    0000007c     arp.obj (.text:arpProcessRequest)
+                  00011c26    0000007c     igmp.obj (.text:igmpTick)
+                  00011ca2    0000007c     ndp_misc.obj (.text:ndpAddOption)
+                  00011d1e    00000002     --HOLE-- [fill = 0]
+                  00011d20    0000007c     ndp_misc.obj (.text:ndpUpdateDefaultRouterList)
+                  00011d9c    0000007a     arp.obj (.text:arpSendQueuedPackets)
+                  00011e16    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.asm.obj (.text)
+                  00011e90    0000007a     udp.obj (.text:udpSendDatagram)
+                  00011f0a    0000007a     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:xTaskCreate)
+                  00011f84    00000078     dns_cache.obj (.text:dnsCreateEntry)
+                  00011ffc    00000078     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvInsertTimerInActiveList)
+                  00012074    00000078     udp.obj (.text:udpAttachRxCallback)
+                  000120ec    00000078     udp.obj (.text:udpDetachRxCallback)
+                  00012164    00000076     ipv6_misc.obj (.text:ipv6CompPrefix)
+                  000121da    00000076     tcp_misc.obj (.text:tcpFastRecovery)
+                  00012250    00000074     rtsv7M4_T_le_v4SPD16_eabi.lib : fclose.c.obj (.text:__TI_closefile)
+                  000122c4    00000074     debug.obj (.text:debugRedirect)
+                  00012338    00000074     dhcp_client.obj (.text:dhcpClientLinkChangeEvent)
+                  000123ac    00000074     ethernet.obj (.text:ethCalcCrc)
+                  00012420    00000074     ipv6_misc.obj (.text:ipv6RemovePrefix)
+                  00012494    00000074     ipv6.obj (.text:ipv6SetGlobalAddr)
+                  00012508    00000074     msp432e4_eth_driver.obj (.text:msp432e4EthCalcCrc)
+                  0001257c    00000074     ndp_misc.obj (.text:ndpIsFirstHopRouter)
+                  000125f0    00000074     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvInitialiseTaskLists)
+                  00012664    00000074                                                     : port.obj (.text:vPortValidateInterruptPriority)
+                  000126d8    00000072     ndp_cache.obj (.text:ndpFlushQueuedPackets)
+                  0001274a    00000072     nic.obj (.text:nicSendPacket)
+                  000127bc    00000070     ipv6_misc.obj (.text:ipv6RemoveDefaultRouter)
+                  0001282c    00000070     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvProcessExpiredTimer)
+                  0001289c    0000006e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_mcpy)
+                  0001290a    0000006e     icmpv6.obj (.text:icmpv6ProcessPacketTooBig)
+                  00012978    0000006e     igmp.obj (.text:igmpProcessMessage)
+                  000129e6    00000002     --HOLE-- [fill = 0]
+                  000129e8    0000006c     ipv6.obj (.text:ipv6SetLinkLocalAddr)
+                  00012a54    0000006c     ndp_misc.obj (.text:ndpUpdateNextHop)
+                  00012ac0    0000006c     net.obj (.text:netInvokeLinkChangeCallback)
+                  00012b2c    0000006c     socket.obj (.text:socketClose)
+                  00012b98    0000006a     tcp_fsm.obj (.text:tcpStateClosing)
+                  00012c02    0000006a     udp.obj (.text:udpUpdateEvents)
+                  00012c6c    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : hostlseek.c.obj (.text:HOSTlseek)
+                  00012cd4    00000068                                   : hostrename.c.obj (.text:HOSTrename)
+                  00012d3c    00000068                                   : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00012da4    00000068     ipv6_misc.obj (.text:ipv6GetAddrScope)
+                  00012e0c    00000068     tcp_misc.obj (.text:tcpFastRetransmit)
+                  00012e74    00000066     icmp.obj (.text:icmpProcessMessage)
+                  00012eda    00000066     ipv6_misc.obj (.text:ipv6IsOnLink)
+                  00012f40    00000066     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : list.obj (.text:vListInsert)
+                  00012fa6    00000066                                                     : queue.obj (.text:xQueueGenericCreate)
+                  0001300c    00000064     rtsv7M4_T_le_v4SPD16_eabi.lib : fprintf.c.obj (.text:fprintf)
+                  00013070    00000064                                   : s_frexp.c.obj (.text:frexp)
+                  000130d4    00000064                                   : fseek.c.obj (.text:fseek)
+                  00013138    00000064     ndp_misc.obj (.text:ndpGetOption)
+                  0001319c    00000064     ndp_misc.obj (.text:ndpUpdatePrefixList)
+                  00013200    00000064     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvGetExpectedIdleTime)
+                  00013264    00000062     rtsv7M4_T_le_v4SPD16_eabi.lib : _io_perm.c.obj (.text:__TI_wrt_ok)
+                  000132c6    00000062     ipv4.obj (.text:ipv4GetAddrScope)
+                  00013328    00000062     mld.obj (.text:mldTick)
+                  0001338a    00000002     --HOLE-- [fill = 0]
+                  0001338c    00000060     rtsv7M4_T_le_v4SPD16_eabi.lib : hostopen.c.obj (.text:HOSTopen)
+                  000133ec    00000060     msp432e4_driverlib.a : interrupt_MSP432E411Y.obj (.text:IntDisable)
+                  0001344c    00000060                          : interrupt_MSP432E411Y.obj (.text:IntEnable)
+                  000134ac    00000060     igmp.obj (.text:igmpJoinGroup)
+                  0001350c    00000060     ipv4.obj (.text:ipv4Init)
+                  0001356c    00000060     mld.obj (.text:mldStartListening)
+                  000135cc    00000060     modbus_client_misc.obj (.text:modbusClientFormatMbapHeader)
+                  0001362c    00000060     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.text:pxPortInitialiseStack)
+                  0001368c    00000060     tcp_fsm.obj (.text:tcpStateCloseWait)
+                  000136ec    0000005e     ip.obj (.text:ipSelectSourceAddr)
+                  0001374a    0000005e     ip.obj (.text:ipSendDatagram)
+                  000137a8    0000005c     rtsv7M4_T_le_v4SPD16_eabi.lib : close.c.obj (.text:close)
+                  00013804    0000005c     igmp.obj (.text:igmpProcessReportMessage)
+                  00013860    0000005c     ipv6_misc.obj (.text:ipv6FlushAddrList)
+                  000138bc    0000005c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvIdleTask)
+                  00013918    0000005c                                                     : queue.obj (.text:vQueueWaitForMessageRestricted)
+                  00013974    0000005c                                                     : tasks.obj (.text:vTaskDelay)
+                  000139d0    0000005a     modbus_client_pdu.obj (.text:modbusClientParseWriteMultipleRegsResp)
+                  00013a2a    0000005a     ndp_misc.obj (.text:ndpSelectNextHop)
+                  00013a84    0000005a     tcp_misc.obj (.text:tcpCheckSyn)
+                  00013ade    00000002     --HOLE-- [fill = 0]
+                  00013ae0    00000058     rtsv7M4_T_le_v4SPD16_eabi.lib : hostread.c.obj (.text:HOSTread)
+                  00013b38    00000058                                   : hostwrite.c.obj (.text:HOSTwrite)
+                  00013b90    00000058     dhcp_client.obj (.text:dhcpClientStateBound)
+                  00013be8    00000058     icmp.obj (.text:icmpUpdateInStats)
+                  00013c40    00000058     icmp.obj (.text:icmpUpdateOutStats)
+                  00013c98    00000058     ipv4.obj (.text:ipv4SetHostAddr)
+                  00013cf0    00000058     ipv6_misc.obj (.text:ipv6IsAnycastAddr)
+                  00013d48    00000058     modbus_client_misc.obj (.text:modbusClientParseMbapHeader)
+                  00013da0    00000058     msp432e4_eth_driver.obj (.text:msp432e4EthWritePhyReg)
+                  00013df8    00000058     ndp.obj (.text:ndpLinkChangeEvent)
+                  00013e50    00000058     net_mem.obj (.text:netBufferAlloc)
+                  00013ea8    00000058     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.text:vPortSetupTimerInterrupt)
+                  00013f00    00000056     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_f)
+                  00013f56    00000056     ipv4.obj (.text:ipv4IsBroadcastAddr)
+                  00013fac    00000054     ipv6_misc.obj (.text:ipv6FlushPrefixList)
+                  00014000    00000054     ipv6.obj (.text:ipv6SetDnsServer)
+                  00014054    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : ltoa.c.obj (.text:ltoa)
+                  000140a8    00000054     msp432e4_eth_driver.obj (.text:msp432e4EthReadPhyReg)
+                  000140fc    00000054     net_mem.obj (.text:netBufferAppend)
+                  00014150    00000054     net_mem.obj (.text:netBufferAt)
+                  000141a4    00000054     slaac.obj (.text:slaacLinkChangeEvent)
+                  000141f8    00000054     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:xTimerCreateTimerTask)
+                  0001424c    00000052     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ecpy)
+                  0001429e    00000052     ip.obj (.text:ipStringToAddr)
+                  000142f0    00000052     ethernet.obj (.text:macAddrToEui64)
+                  00014342    00000002     --HOLE-- [fill = 0]
+                  00014344    00000050     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.text:SysCtlPeripheralReset)
+                  00014394    00000050     debug.obj (.text:debugInit)
+                  000143e4    00000050     dhcp_client.obj (.text:dhcpClientCheckTimeout)
+                  00014434    00000050     ethernet.obj (.text:ethPadFrame)
+                  00014484    00000050     ip.obj (.text:ipCalcUpperLayerChecksumEx)
+                  000144d4    00000050     ip.obj (.text:ipIsUnspecifiedAddr)
+                  00014524    00000050     ipv4.obj (.text:ipv4AddrToString)
+                  00014574    00000050     ipv6_misc.obj (.text:ipv6IsTentativeAddr)
+                  000145c4    00000050     modbus_client_pdu.obj (.text:modbusClientFormatReadHoldingRegsReq)
+                  00014614    00000050     ndp_cache.obj (.text:ndpFindNeighborCacheEntry)
+                  00014664    00000050     str.obj (.text:strSafeCopy)
+                  000146b4    00000050     tcp.obj (.text:tcpGetDynamicPort)
+                  00014704    00000050     tcp_fsm.obj (.text:tcpStateLastAck)
+                  00014754    00000050     udp.obj (.text:udpGetDynamicPort)
+                  000147a4    0000004e     ipv4.obj (.text:ipv4MapMulticastAddrToMac)
+                  000147f2    0000004e     ndp.obj (.text:ndpInit)
+                  00014840    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : fflush.c.obj (.text:__TI_doflush)
+                  0001488c    0000004c                                   : atoi.c.obj (.text:atoi)
+                  000148d8    0000004c     ipv4.obj (.text:ipv4SetDnsServer)
+                  00014924    0000004c     ipv6_misc.obj (.text:ipv6FlushDefaultRouterList)
+                  00014970    0000004c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvCheckForValidListAndQueue)
+                  000149bc    0000004c                                                     : tasks.obj (.text:prvCheckTasksWaitingTermination)
+                  00014a08    0000004c     tcp_misc.obj (.text:tcpWaitForEvents)
+                  00014a54    0000004c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.text:vPortEnterCritical)
+                  00014aa0    0000004a     arp.obj (.text:arpFindEntry)
+                  00014aea    00000002     --HOLE-- [fill = 0]
+                  00014aec    00000048     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.text:_SysCtlFrequencyGet)
+                  00014b34    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.c.obj (.text:exit)
+                  00014b7c    00000048     main_freertos.obj (.text:ioInit)
+                  00014bc4    00000048     ip.obj (.text:ipAddrToString)
+                  00014c0c    00000048     net_mem.obj (.text:memPoolAlloc)
+                  00014c54    00000048     ndp_cache.obj (.text:ndpFindDestCacheEntry)
+                  00014c9c    00000048     nic.obj (.text:nicUpdateMacAddrFilter)
+                  00014ce4    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_toi_t2.asm.obj (.text)
+                  00014d2c    00000048     tcp_misc.obj (.text:tcpIsDuplicateAck)
+                  00014d74    00000048     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : list.obj (.text:uxListRemove)
+                  00014dbc    00000046     ipv6_misc.obj (.text:ipv6GenerateLinkLocalAddr)
+                  00014e02    00000046     ipv6_misc.obj (.text:ipv6MapMulticastAddrToMac)
+                  00014e48    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : hostclose.c.obj (.text:HOSTclose)
+                  00014e8c    00000044                                   : hostunlink.c.obj (.text:HOSTunlink)
+                  00014ed0    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00014f14    00000044     dns_cache.obj (.text:dnsFlushCache)
+                  00014f58    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : getdevice.c.obj (.text:getdevice)
+                  00014f9c    00000044     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvInitialiseNewQueue)
+                  00014fe0    00000042     msp432e4_driverlib.a : uart_MSP432E411Y.obj (.text:UARTConfigSetExpClk)
+                  00015022    00000042     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : memory.obj (.text:malloc)
+                  00015064    00000042     tcp_misc.obj (.text:tcpChangeState)
+                  000150a6    00000002     --HOLE-- [fill = 0]
+                  000150a8    00000040     net.obj (.text:netSetMacAddr)
+                  000150e8    00000040     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:sprintf)
+                  00015128    00000040     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:vTaskPlaceOnEventListRestricted)
+                  00015168    0000003e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_fcpy)
+                  000151a6    0000003e     os_port_freertos.obj (.text:osCreateEvent)
+                  000151e4    0000003c     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.text:SysCtlPeripheralReady)
+                  00015220    0000003c     arp.obj (.text:arpFlushCache)
+                  0001525c    0000003c     debug.obj (.text:debugStreamWrite)
+                  00015298    0000003c     dhcp_client.obj (.text:dhcpClientStateInit)
+                  000152d4    0000003c     dhcp_client.obj (.text:dhcpClientStateInitReboot)
+                  00015310    0000003c     ipv4.obj (.text:ipv4LinkChangeEvent)
+                  0001534c    0000003c     ipv6_misc.obj (.text:ipv6ComputeSolicitedNodeAddr)
+                  00015388    0000003c     ndp_misc.obj (.text:ndpCheckOptions)
+                  000153c4    0000003c     ndp_cache.obj (.text:ndpFlushNeighborCache)
+                  00015400    0000003c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvCopyDataFromQueue)
+                  0001543c    0000003c                                                     : tasks.obj (.text:prvResetNextTaskUnblockTime)
+                  00015478    0000003c                                                     : tasks.obj (.text:pvTaskGetThreadLocalStoragePointer)
+                  000154b4    0000003c     rtsv7M4_T_le_v4SPD16_eabi.lib : strncasecmp.c.obj (.text:strncasecmp)
+                  000154f0    0000003c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : list.obj (.text:vListInsertEnd)
+                  0001552c    0000003a     arp.obj (.text:arpFlushQueuedPackets)
+                  00015566    0000003a     os_port_freertos.obj (.text:osCreateTask)
+                  000155a0    0000003a     tcp_misc.obj (.text:tcpFlushRetransmitQueue)
+                  000155da    00000002     --HOLE-- [fill = 0]
+                  000155dc    00000038     rtsv7M4_T_le_v4SPD16_eabi.lib : trgmsg.c.obj (.text:__TI_writemsg)
+                  00015614    00000038                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  0001564c    00000038     debug.obj (.text:fputc)
+                  00015684    00000038     icmpv6.obj (.text:icmpv6ProcessDestUnreachable)
+                  000156bc    00000038     ipv4.obj (.text:ipv4SetDefaultGateway)
+                  000156f4    00000038     modbus_client.obj (.text:modbusClientInit)
+                  0001572c    00000038     nic.obj (.text:nicTick)
+                  00015764    00000038     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvGetNextExpireTime)
+                  0001579c    00000038                                                     : port.obj (.text:prvTaskExitError)
+                  000157d4    00000036     dhcp_client.obj (.text:dhcpClientComputeElapsedTime)
+                  0001580a    00000036     net_mem.obj (.text:netBufferGetLength)
+                  00015840    00000036     rtsv7M4_T_le_v4SPD16_eabi.lib : strncpy.c.obj (.text:strncpy)
+                  00015876    00000002     --HOLE-- [fill = 0]
+                  00015878    00000034     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.text:SysCtlPeripheralEnable)
+                  000158ac    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : fopen.c.obj (.text:__TI_cleanup)
+                  000158e0    00000034                                   : trgmsg.c.obj (.text:__TI_readmsg)
+                  00015914    00000034                                   : fopen.c.obj (.text:freopen)
+                  00015948    00000034     ipv4.obj (.text:ipv4GetBroadcastAddr)
+                  0001597c    00000034     modbus_client_misc.obj (.text:modbusClientGetResponsePdu)
+                  000159b0    00000034     net.obj (.text:netSetHostname)
+                  000159e4    00000034     net.obj (.text:netSetInterfaceName)
+                  00015a18    00000034     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvSampleTimeNow)
+                  00015a4c    00000034                                                     : tasks.obj (.text:vTaskPlaceOnEventList)
+                  00015a80    00000034                                                     : tasks.obj (.text:vTaskSetThreadLocalStoragePointer)
+                  00015ab4    00000032     ipv4_frag.obj (.text:ipv4FlushFragQueue)
+                  00015ae6    00000032     net.obj (.text:netGetRandRange)
+                  00015b18    00000030     rtsv7M4_T_le_v4SPD16_eabi.lib : getdevice.c.obj (.text:finddevice)
+                  00015b48    00000030     ip.obj (.text:ipAllocBuffer)
+                  00015b78    00000030     ipv6_frag.obj (.text:ipv6FlushFragQueue)
+                  00015ba8    00000030     msp432e4_eth_driver.obj (.text:msp432e4EthInitGpio)
+                  00015bd8    00000030     tcp_misc.obj (.text:tcpFastLossRecovery)
+                  00015c08    00000030     tcp_misc.obj (.text:tcpFlushSynQueue)
+                  00015c38    00000030     udp.obj (.text:udpInit)
+                  00015c68    00000030     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : list.obj (.text:vListInitialise)
+                  00015c98    00000030                                                     : port.obj (.text:vPortExitCritical)
+                  00015cc8    00000030                                                     : tasks.obj (.text:xTaskGetSchedulerState)
+                  00015cf8    0000002e     ethernet.obj (.text:ethAllocBuffer)
+                  00015d26    0000002e     ipv6_pmtu.obj (.text:ipv6GetPathMtu)
+                  00015d54    0000002e     ipv6_pmtu.obj (.text:ipv6UpdatePathMtu)
+                  00015d82    0000002e     os_port_freertos.obj (.text:osWaitForEvent)
+                  00015db0    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.asm.obj (.text)
+                  00015dde    0000002e     socket.obj (.text:socketReceive)
+                  00015e0c    0000002e     socket.obj (.text:socketSend)
+                  00015e3a    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : strcasecmp.c.obj (.text:strcasecmp)
+                  00015e68    0000002c     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.text:GPIODirModeSet)
+                  00015e94    0000002c                          : gpio_MSP432E411Y.obj (.text:GPIOPinConfigure)
+                  00015ec0    0000002c     main_freertos.obj (.text:blinkTask)
+                  00015eec    0000002c     dns_cache.obj (.text:dnsDeleteEntry)
+                  00015f18    0000002c     ipv4.obj (.text:ipv4SetSubnetMask)
+                  00015f44    0000002c     net.obj (.text:netSetDriver)
+                  00015f70    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : strncmp.c.obj (.text:strncmp)
+                  00015f9c    0000002c     cpu_endian.obj (.text:swapInt32)
+                  00015fc8    0000002c     tcp_timer.obj (.text:tcpTimerElapsed)
+                  00015ff4    0000002c     rtsv7M4_T_le_v4SPD16_eabi.lib : unlink.c.obj (.text:unlink)
+                  00016020    0000002c     main_freertos.obj (.text:userTask)
+                  0001604c    0000002c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.text:xPortSysTickHandler)
+                  00016078    0000002c                                                     : queue.obj (.text:xQueueCreateMutex)
+                  000160a4    0000002a     modbus_client.obj (.text:modbusClientDisconnect)
+                  000160ce    0000002a     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvInitialiseMutex)
+                  000160f8    00000028     ethernet.obj (.text:ethUpdateErrorStats)
+                  00016120    00000028     rtsv7M4_T_le_v4SPD16_eabi.lib : lseek.c.obj (.text:lseek)
+                  00016148    00000028     modbus_client_pdu.obj (.text:modbusClientParseExceptionResp)
+                  00016170    00000028     msp432e4_eth_driver.obj (.text:msp432e4EthDumpPhyReg)
+                  00016198    00000028     nbns_common.obj (.text:nbnsInit)
+                  000161c0    00000028     socket.obj (.text:socketSetTimeout)
+                  000161e8    00000028     tcp_misc.obj (.text:tcpDeleteControlBlock)
+                  00016210    00000028     rtsv7M4_T_le_v4SPD16_eabi.lib : write.c.obj (.text:write)
+                  00016238    00000026     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvIsQueueFull)
+                  0001625e    00000026     tcp_fsm.obj (.text:tcpStateClosed)
+                  00016284    00000026     udp.obj (.text:udpAllocBuffer)
+                  000162aa    00000002     --HOLE-- [fill = 0]
+                  000162ac    00000024     msp432e4_driverlib.a : interrupt_MSP432E411Y.obj (.text:IntPrioritySet)
+                  000162d0    00000024     ethernet.obj (.text:ethUpdateOutStats)
+                  000162f4    00000024     igmp.obj (.text:igmpInit)
+                  00016318    00000024     rtsv7M4_T_le_v4SPD16_eabi.lib : memcmp.c.obj (.text:memcmp)
+                  0001633c    00000024                                   : memmov.c.obj (.text:memmove)
+                  00016360    00000024     mld.obj (.text:mldStopListening)
+                  00016384    00000024     modbus_client.obj (.text:modbusClientDeinit)
+                  000163a8    00000024     modbus_client.obj (.text:modbusClientGetExceptionCode)
+                  000163cc    00000024     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvGetDisinheritPriorityAfterTimeout)
+                  000163f0    00000024     cpu_endian.obj (.text:swapInt16)
+                  00016414    00000024     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:vQueueDelete)
+                  00016438    00000024                                                     : tasks.obj (.text:vTaskInternalSetTimeOutState)
+                  0001645c    00000022                                                     : aeabi_portable.obj (.text:__aeabi_errno_addr)
+                  0001647e    00000022     ipv4.obj (.text:ipv4CheckSourceAddr)
+                  000164a0    00000020     msp432e4_driverlib.a : interrupt_MSP432E411Y.obj (.text:IntPriorityGroupingSet)
+                  000164c0    00000020                          : uart_MSP432E411Y.obj (.text:UARTDisable)
+                  000164e0    00000020                          : sysctl_MSP432E411Y.obj (.text:_SysCtlMemTimingGet)
+                  00016500    00000020     ethernet.obj (.text:ethUpdateInStats)
+                  00016520    00000020     ipv6_misc.obj (.text:ipv6GetMulticastAddrScope)
+                  00016540    00000020     rtsv7M4_T_le_v4SPD16_eabi.lib : memchr.c.obj (.text:memchr)
+                  00016560    00000020     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : queue.obj (.text:prvIsQueueEmpty)
+                  00016580    0000001e     ipv4.obj (.text:ipv4UpdateInStats)
+                  0001659e    0000001e     ipv4.obj (.text:ipv4UpdateOutStats)
+                  000165bc    0000001c     ipv4_frag.obj (.text:ipv4FindHole)
+                  000165d8    0000001c     ipv6_frag.obj (.text:ipv6FindHole)
+                  000165f4    0000001c     rtsv7M4_T_le_v4SPD16_eabi.lib : memccpy.c.obj (.text:memccpy)
+                  00016610    0000001c     modbus_client.obj (.text:modbusClientSetTimeout)
+                  0001662c    0000001c     net.obj (.text:netInitRand)
+                  00016648    0000001c     os_port_freertos.obj (.text:osCreateMutex)
+                  00016664    0000001c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:pvTaskIncrementMutexHeldCount)
+                  00016680    0000001c     socket.obj (.text:socketBindToInterface)
+                  0001669c    0000001c     tcp_timer.obj (.text:tcpTimerStart)
+                  000166b8    0000001a     ipv6_misc.obj (.text:ipv6CheckSourceAddr)
+                  000166d2    0000001a     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.text:prvTimerTask)
+                  000166ec    00000018     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.text:GPIOPinTypeGPIOOutput)
+                  00016704    00000018     drivers_msp432e4.aem4f : PowerMSP432E4.oem4f (.text:Power_idleFunc)
+                  0001671c    00000018     system_msp432e401y.obj (.text:SystemInit)
+                  00016734    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outs)
+                  0001674c    00000018     arp.obj (.text:arpInit)
+                  00016764    00000018     dns_cache.obj (.text:dnsInit)
+                  0001677c    00000018     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : memory.obj (.text:free)
+                  00016794    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : strcmp.c.obj (.text:strcmp)
+                  000167ac    00000016     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.text:GPIOPinTypeEthernetLED)
+                  000167c2    00000016                          : gpio_MSP432E411Y.obj (.text:GPIOPinTypeGPIOInput)
+                  000167d8    00000016                          : gpio_MSP432E411Y.obj (.text:GPIOPinTypeUART)
+                  000167ee    00000016     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : PTLS.obj (.text:PTLS_getBuf)
+                  00016804    00000016                                                     : PTLS.obj (.text:PTLS_setBuf)
+                  0001681a    00000016     igmp.obj (.text:igmpRand)
+                  00016830    00000016     ipv6.obj (.text:ipv6UpdateInStats)
+                  00016846    00000016     ipv6.obj (.text:ipv6UpdateOutStats)
+                  0001685c    00000016     mld.obj (.text:mldRand)
+                  00016872    00000016     ndp_cache.obj (.text:ndpFlushDestCache)
+                  00016888    00000016     os_port_freertos.obj (.text:osSetEventFromIsr)
+                  0001689e    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
+                  000168b4    00000014     msp432e4_driverlib.a : uart_MSP432E411Y.obj (.text:UARTEnable)
+                  000168c8    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : s_copysign.c.obj (.text:copysign)
+                  000168dc    00000014     ethernet.obj (.text:ethInit)
+                  000168f0    00000014     ipv6_misc.obj (.text:ipv6FlushDnsServerList)
+                  00016904    00000014     net_mem.obj (.text:netBufferFree)
+                  00016918    00000014     os_port_freertos.obj (.text:osDeleteEvent)
+                  0001692c    00000014     os_port_freertos.obj (.text:osReleaseMutex)
+                  00016940    00000014     os_port_freertos.obj (.text:osSetEvent)
+                  00016954    00000014     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:prvDeleteTCB)
+                  00016968    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : strcpy.c.obj (.text:strcpy)
+                  0001697c    00000014                                   : strlen.c.obj (.text:strlen)
+                  00016990    00000014     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:xTaskGetCurrentTaskHandle)
+                  000169a4    00000014                                                     : tasks.obj (.text:xTaskGetTickCount)
+                  000169b8    00000012     ipv6.obj (.text:ipv6ParseAuthHeader)
+                  000169ca    00000012     ipv6.obj (.text:ipv6ParseEspHeader)
+                  000169dc    00000012     os_port_freertos.obj (.text:osAcquireMutex)
+                  000169ee    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : wcslen.c.obj (.text:wcslen)
+                  00016a00    00000010     msp432e4_driverlib.a : fpu_MSP432E411Y.obj (.text:FPUEnable)
+                  00016a10    00000010     debug.obj (.text:debugStreamOpen)
+                  00016a20    00000010     debug.obj (.text:debugStreamRead)
+                  00016a30    00000010     debug.obj (.text:debugStreamSeek)
+                  00016a40    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : isdigit.c.obj (.text:isdigit)
+                  00016a50    00000010                                   : isupper.c.obj (.text:isupper)
+                  00016a60    00000010                                   : isxdigit.c.obj (.text:isxdigit)
+                  00016a70    00000010     os_port_freertos.obj (.text:osAllocMem)
+                  00016a80    00000010     os_port_freertos.obj (.text:osFreeMem)
+                  00016a90    00000010     os_port_freertos.obj (.text:osResetEvent)
+                  00016aa0    00000010     os_port_freertos.obj (.text:osResumeAllTasks)
+                  00016ab0    00000010     os_port_freertos.obj (.text:osSuspendAllTasks)
+                  00016ac0    00000010     tcp_misc.obj (.text:tcpDumpHeader)
+                  00016ad0    00000010     tcp.obj (.text:tcpInit)
+                  00016ae0    00000010     tcp_timer.obj (.text:tcpTimerStop)
+                  00016af0    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : toupper.c.obj (.text:toupper)
+                  00016b00    00000010     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : list.obj (.text:vListInitialiseItem)
+                  00016b10    00000010                                                     : tasks.obj (.text:vTaskSuspendAll)
+                  00016b20    0000000e     debug.obj (.text:debugStreamRename)
+                  00016b2e    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00016b3c    0000000e     modbus_client_misc.obj (.text:modbusClientGetRequestPdu)
+                  00016b4a    0000000e     modbus_debug.obj (.text:modbusDumpRequestPdu)
+                  00016b58    0000000e     modbus_debug.obj (.text:modbusDumpResponsePdu)
+                  00016b66    0000000e     tcp_timer.obj (.text:tcpTimerRunning)
+                  00016b74    0000000c     startup_msp432e401y.obj (.text:Reset_Handler)
+                  00016b80    0000000c     debug.obj (.text:debugStreamClose)
+                  00016b8c    0000000c     debug.obj (.text:debugStreamUnlink)
+                  00016b98    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00016ba4    0000000c     net_mem.obj (.text:memPoolFree)
+                  00016bb0    0000000c     mld.obj (.text:mldInit)
+                  00016bbc    0000000c     msp432e4_eth_driver.obj (.text:msp432e4EthDisableIrq)
+                  00016bc8    0000000c     msp432e4_eth_driver.obj (.text:msp432e4EthEnableIrq)
+                  00016bd4    0000000c     nic.obj (.text:nicGetLogicalInterface)
+                  00016be0    0000000c     nic.obj (.text:nicGetPhysicalInterface)
+                  00016bec    0000000c     os_port_freertos.obj (.text:osDelayTask)
+                  00016bf8    0000000c     os_port_freertos.obj (.text:osGetSystemTime)
+                  00016c04    0000000c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.text:vTaskMissedYield)
+                  00016c10    0000000a     msp432e4_driverlib.a : uart_MSP432E411Y.obj (.text:UARTCharPut)
+                  00016c1a    0000000a     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outc)
+                  00016c24    0000000a     arp.obj (.text:arpDumpPacket)
+                  00016c2e    0000000a     ethernet.obj (.text:ethDumpHeader)
+                  00016c38    0000000a     icmp.obj (.text:icmpDumpEchoMessage)
+                  00016c42    0000000a     icmp.obj (.text:icmpDumpErrorMessage)
+                  00016c4c    0000000a     icmp.obj (.text:icmpDumpMessage)
+                  00016c56    0000000a     icmpv6.obj (.text:icmpv6DumpDestUnreachableMessage)
+                  00016c60    0000000a     icmpv6.obj (.text:icmpv6DumpEchoMessage)
+                  00016c6a    0000000a     icmpv6.obj (.text:icmpv6DumpErrorMessage)
+                  00016c74    0000000a     icmpv6.obj (.text:icmpv6DumpMessage)
+                  00016c7e    0000000a     icmpv6.obj (.text:icmpv6DumpPacketTooBigMessage)
+                  00016c88    0000000a     igmp.obj (.text:igmpDumpMessage)
+                  00016c92    0000000a     ipv4.obj (.text:ipv4DumpHeader)
+                  00016c9c    0000000a     ipv4_frag.obj (.text:ipv4DumpHoleList)
+                  00016ca6    0000000a     ipv6.obj (.text:ipv6DumpHeader)
+                  00016cb0    0000000a     ipv6_frag.obj (.text:ipv6DumpHoleList)
+                  00016cba    0000000a     mld.obj (.text:mldDumpMessage)
+                  00016cc4    0000000a     msp432e4_eth_driver.obj (.text:msp432e4EthTick)
+                  00016cce    0000000a     ndp.obj (.text:ndpDumpNeighborAdvMessage)
+                  00016cd8    0000000a     ndp.obj (.text:ndpDumpNeighborSolMessage)
+                  00016ce2    0000000a     ndp.obj (.text:ndpDumpRedirectMessage)
+                  00016cec    0000000a     ndp.obj (.text:ndpDumpRouterAdvMessage)
+                  00016cf6    0000000a     ndp.obj (.text:ndpDumpRouterSolMessage)
+                  00016d00    0000000a     udp.obj (.text:udpDumpHeader)
+                  00016d0a    0000000a     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : PowerMSP432E4_freertos.obj (.text:vPortSuppressTicksAndSleep)
+                  00016d14    00000008     net.obj (.text:netGetDefaultInterface)
+                  00016d1c    00000008     os_port_freertos.obj (.text:osStartKernel)
+                  00016d24    00000006     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.text:GPIOPinRead)
+                  00016d2a    00000006                          : gpio_MSP432E411Y.obj (.text:GPIOPinWrite)
+                  00016d30    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : fprintf.c.obj (.text:_outc)
+                  00016d34    00000004                                   : fprintf.c.obj (.text:_outs)
+                  00016d38    00000004                                   : pre_init.c.obj (.text:_system_pre_init)
+                  00016d3c    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00016d40    00000004     net_mem.obj (.text:memPoolInit)
+
+.const     0    00016d44    000005a7     
+                  00016d44    000001b0     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.const:g_pppui32XTALtoVCO)
+                  00016ef4    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  00016ff5    00000003     --HOLE-- [fill = 0]
+                  00016ff8    0000009c     msp432e4_driverlib.a : interrupt_MSP432E411Y.obj (.const:g_pui32Regs)
+                  00017094    0000005e     dhcp_client.obj (.const:.string)
+                  000170f2    00000002     --HOLE-- [fill = 0]
+                  000170f4    00000048     msp432e4_driverlib.a : gpio_MSP432E411Y.obj (.const:g_pui32GPIOBaseAddrs)
+                  0001713c    00000040     ethernet.obj (.const:.string:ethPadding)
+                  0001717c    00000040     msp432e4_eth_driver.obj (.const:msp432e4EthDriver)
+                  000171bc    00000030     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.const:g_sXTALtoMEMTIM)
+                  000171ec    00000028                          : sysctl_MSP432E411Y.obj (.const:g_pui32Xtals)
+                  00017214    00000020                          : interrupt_MSP432E411Y.obj (.const:g_pui32Priority)
+                  00017234    00000014                          : interrupt_MSP432E411Y.obj (.const:g_pui32Dii16Regs)
+                  00017248    00000014                          : interrupt_MSP432E411Y.obj (.const:g_pui32EnRegs)
+                  0001725c    00000010     ipv6.obj (.const:IPV6_LINK_LOCAL_ADDR_PREFIX)
+                  0001726c    00000010     ipv6.obj (.const:IPV6_LINK_LOCAL_ALL_NODES_ADDR)
+                  0001727c    00000010     ipv6.obj (.const:IPV6_LINK_LOCAL_ALL_ROUTERS_ADDR)
+                  0001728c    00000010     ipv6.obj (.const:IPV6_LOOPBACK_ADDR)
+                  0001729c    00000010     ipv6.obj (.const:IPV6_SOLICITED_NODE_ADDR_PREFIX)
+                  000172ac    00000010     ipv6.obj (.const:IPV6_UNSPECIFIED_ADDR)
+                  000172bc    0000000a     main_freertos.obj (.const:$P$T5$1)
+                  000172c6    00000002     --HOLE-- [fill = 0]
+                  000172c8    00000008     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.const)
+                  000172d0    00000008     msp432e4_driverlib.a : sysctl_MSP432E411Y.obj (.const:g_pui32VCOFrequencies)
+                  000172d8    00000007     dhcp_client.obj (.const:.string:dhcpOptionList)
+                  000172df    00000006     ethernet.obj (.const:MAC_BROADCAST_ADDR)
+                  000172e5    00000006     ethernet.obj (.const:MAC_UNSPECIFIED_ADDR)
+
+.cinit     0    000172f0    00000198     
+                  000172f0    00000172     (.cinit..data.load) [load image, compression = lzss]
+                  00017462    00000002     --HOLE-- [fill = 0]
+                  00017464    0000000c     (__TI_handler_table)
+                  00017470    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00017478    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.bss       0    20000000    0002642d     UNINITIALIZED
+                  20000000    00020000     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : heap_4.obj (.bss:ucHeap)
+                  20020000    00002400     msp432e4_eth_driver.obj (.bss:rxBuffer)
+                  20022400    000016f8     (.common:socketTable)
+                  20023af8    00001200     msp432e4_eth_driver.obj (.bss:txBuffer)
+                  20024cf8    00000c0c     (.common:netInterface)
+                  20025904    000003a0     (.common:dnsCache)
+                  20025ca4    00000234     (.common:modbusClientContext)
+                  20025ed8    00000120     rtsv7M4_T_le_v4SPD16_eabi.lib : trgmsg.c.obj (.bss:_CIOBUF_)
+                  20025ff8    000000c0     msp432e4_eth_driver.obj (.bss:rxDmaDesc)
+                  200260b8    000000a0     (.common:__TI_tmpnams)
+                  20026158    000000a0     (.common:udpCallbackTable)
+                  200261f8    00000060     msp432e4_eth_driver.obj (.bss:txDmaDesc)
+                  20026258    00000048     net.obj (.bss:callbackTable)
+                  200262a0    0000003c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.bss:pxReadyTasksLists)
+                  200262dc    00000028     ipv6.obj (.bss:buffer$1)
+                  20026304    00000018     date_time.obj (.bss:buffer$1)
+                  2002631c    00000014     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.bss:xActiveTimerList1)
+                  20026330    00000014                                                     : timers.obj (.bss:xActiveTimerList2)
+                  20026344    00000014                                                     : tasks.obj (.bss:xDelayedTaskList1)
+                  20026358    00000014                                                     : tasks.obj (.bss:xDelayedTaskList2)
+                  2002636c    00000014                                                     : tasks.obj (.bss:xPendingReadyList)
+                  20026380    00000014                                                     : tasks.obj (.bss:xSuspendedTaskList)
+                  20026394    00000014                                                     : tasks.obj (.bss:xTasksWaitingTermination)
+                  200263a8    00000010     ipv4.obj (.bss:buffer$1)
+                  200263b8    0000000c     msp432e4_eth_driver.obj (.bss)
+                  200263c4    00000008     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.bss)
+                  200263cc    00000008                                                     : timers.obj (.bss)
+                  200263d4    00000008     net.obj (.bss)
+                  200263dc    00000008     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : heap_4.obj (.bss:xStart)
+                  200263e4    00000008     (.common:parmbuf)
+                  200263ec    00000004     net.obj (.bss:callbackTableMutex)
+                  200263f0    00000004     (.common:arpTickCounter)
+                  200263f4    00000004     (.common:dhcpClientTickCounter)
+                  200263f8    00000004     (.common:dnsTickCounter)
+                  200263fc    00000004     (.common:igmpTickCounter)
+                  20026400    00000004     (.common:ipv4FragTickCounter)
+                  20026404    00000004     (.common:ipv6FragTickCounter)
+                  20026408    00000004     (.common:mldTickCounter)
+                  2002640c    00000004     (.common:ndpTickCounter)
+                  20026410    00000004     (.common:netEvent)
+                  20026414    00000004     (.common:netMutex)
+                  20026418    00000004     (.common:netTaskHandle)
+                  2002641c    00000004     (.common:nicTickCounter)
+                  20026420    00000004     (.common:tcpTickCounter)
+                  20026424    00000004     (.common:udpCallbackMutex)
+                  20026428    00000002     tcp.obj (.bss)
+                  2002642a    00000002     udp.obj (.bss)
+                  2002642c    00000001     ip.obj (.bss)
+
+.data      0    20026c30    000003e4     UNINITIALIZED
+                  20026c30    0000016c     drivers_msp432e4.aem4f : PowerMSP432E4.oem4f (.data:PowerMSP432E4_module)
+                  20026d9c    000000f0     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.c.obj (.data:_ftable)
+                  20026e8c    00000078                                   : write.c.obj (.data:_device)
+                  20026f04    00000050                                   : write.c.obj (.data:_stream)
+                  20026f54    00000034     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : tasks.obj (.data)
+                  20026f88    00000024     dhcp_client.obj (.data:stateLabel$1)
+                  20026fac    00000018     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : port.obj (.data)
+                  20026fc4    00000010                                                     : heap_4.obj (.data)
+                  20026fd4    00000010     rtsv7M4_T_le_v4SPD16_eabi.lib : defs.c.obj (.data)
+                  20026fe4    0000000c                                   : exit.c.obj (.data:$O1$$)
+                  20026ff0    0000000c     freertos_builds_MSP_EXP432E401Y_release_ccs.lib : timers.obj (.data)
+                  20026ffc    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.c.obj (.data:$O1$$)
+                  20027004    00000004     net.obj (.data)
+                  20027008    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : add_device.c.obj (.data)
+                  2002700c    00000004                                   : open.c.obj (.data)
+                  20027010    00000004     system_msp432e401y.obj (.data)
+
+.stack     0    20026430    00000800     UNINITIALIZED
+                  20026430    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  20026434    000007fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                       code    ro data   rw data
+       ------                       ----    -------   -------
+    .\
+       msp432e4_eth_driver.obj      2178    64        14124  
+       socket.obj                   1408    0         5880   
+       tcp_misc.obj                 6712    0         0      
+       net.obj                      2354    0         3184   
+       ipv6.obj                     4479    96        40     
+       ndp.obj                      4248    0         4      
+       dhcp_client.obj              3246    101       40     
+       ipv4.obj                     3092    0         16     
+       tcp_fsm.obj                  2924    0         0      
+       ipv6_misc.obj                2760    0         0      
+       main_freertos.obj            1902    10        564    
+       arp.obj                      2456    0         4      
+       udp.obj                      2074    0         166    
+       ethernet.obj                 1938    76        0      
+       dns_client.obj               1872    0         0      
+       ipv6_frag.obj                1782    0         4      
+       net_mem.obj                  1746    0         0      
+       slaac.obj                    1676    0         0      
+       tcp.obj                      1634    0         6      
+       ndp_misc.obj                 1634    0         0      
+       dns_cache.obj                696     0         932    
+       ipv4_frag.obj                1598    0         4      
+       mld.obj                      1352    0         4      
+       icmpv6.obj                   1276    0         0      
+       ndp_cache.obj                1130    0         0      
+       igmp.obj                     1122    0         4      
+       nic.obj                      1084    0         4      
+       ip.obj                       1052    0         1      
+       modbus_client_misc.obj       986     0         0      
+       nbns_common.obj              968     0         0      
+       tcp_timer.obj                942     0         0      
+       nbns_client.obj              940     0         0      
+       icmp.obj                     898     0         0      
+       modbus_client.obj            776     0         0      
+       dns_common.obj               712     0         0      
+       startup_msp432e401y.obj      14      520       0      
+       modbus_client_pdu.obj        482     0         0      
+       nbns_responder.obj           468     0         0      
+       os_port_freertos.obj         408     0         0      
+       debug.obj                    398     0         0      
+       date_time.obj                308     0         24     
+       dhcp_common.obj              128     0         0      
+       ipv6_pmtu.obj                92      0         0      
+       cpu_endian.obj               80      0         0      
+       str.obj                      80      0         0      
+       modbus_debug.obj             28      0         0      
+       system_msp432e401y.obj       24      0         4      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       70157   867       25009  
+                                                             
+    C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/devices/msp432e4/driverlib/lib/ccs/m4f/msp432e4_driverlib.a
+       sysctl_MSP432E411Y.obj       792     528       0      
+       gpio_MSP432E411Y.obj         494     72        0      
+       interrupt_MSP432E411Y.obj    260     228       0      
+       uart_MSP432E411Y.obj         128     0         0      
+       fpu_MSP432E411Y.obj          16      0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       1690    828       0      
+                                                             
+    C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/drivers/lib/drivers_msp432e4.aem4f
+       PowerMSP432E4.oem4f          24      0         364    
+    +--+----------------------------+-------+---------+---------+
+       Total:                       24      0         364    
+                                                             
+    C:/ti/workspace/freertos_builds_MSP_EXP432E401Y_release_ccs/Debug/freertos_builds_MSP_EXP432E401Y_release_ccs.lib
+       heap_4.obj                   888     0         131096 
+       tasks.obj                    3716    0         220    
+       queue.obj                    2874    0         0      
+       timers.obj                   1254    0         60     
+       port.obj                     732     8         24     
+       list.obj                     298     0         0      
+       portasm.obj                  218     0         0      
+       memory.obj                   90      0         0      
+       PTLS.obj                     44      0         0      
+       aeabi_portable.obj           34      0         0      
+       PowerMSP432E4_freertos.obj   10      0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       10158   8         131400 
+                                                             
+    C:\ti\ccsv8\tools\compiler\ti-cgt-arm_18.1.2.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       _printfi.c.obj               4863    0         0      
+       fd_add_t2.asm.obj            438     0         0      
+       defs.c.obj                   0       0         416    
+       trgmsg.c.obj                 108     0         288    
+       fopen.c.obj                  312     0         0      
+       fd_div_t2.asm.obj            310     0         0      
+       fputs.c.obj                  276     0         0      
+       s_scalbn.c.obj               272     0         0      
+       fd_cmp_t2.asm.obj            268     0         0      
+       ctype.c.obj                  0       257       0      
+       fd_mul_t2.asm.obj            252     0         0      
+       write.c.obj                  40      0         200    
+       setvbuf.c.obj                220     0         0      
+       open.c.obj                   188     0         4      
+       add_device.c.obj             184     0         4      
+       memcpy_t2.asm.obj            156     0         0      
+       ull_div_t2.asm.obj           150     0         0      
+       memset_t2.asm.obj            122     0         0      
+       fclose.c.obj                 116     0         0      
+       getdevice.c.obj              116     0         0      
+       fprintf.c.obj                108     0         0      
+       copy_decompress_lzss.c.obj   104     0         0      
+       hostlseek.c.obj              104     0         0      
+       hostopen.c.obj               96      0         8      
+       hostrename.c.obj             104     0         0      
+       fseek.c.obj                  100     0         0      
+       s_frexp.c.obj                100     0         0      
+       _io_perm.c.obj               98      0         0      
+       sprintf.c.obj                98      0         0      
+       close.c.obj                  92      0         0      
+       exit.c.obj                   76      0         12     
+       hostread.c.obj               88      0         0      
+       hostwrite.c.obj              88      0         0      
+       ltoa.c.obj                   84      0         0      
+       atoi.c.obj                   76      0         0      
+       fflush.c.obj                 76      0         0      
+       fd_toi_t2.asm.obj            72      0         0      
+       autoinit.c.obj               68      0         0      
+       hostclose.c.obj              68      0         0      
+       hostunlink.c.obj             68      0         0      
+       strncasecmp.c.obj            60      0         0      
+       boot_cortex_m.c.obj          56      0         0      
+       strncpy.c.obj                54      0         0      
+       i_tofd_t2.asm.obj            46      0         0      
+       strcasecmp.c.obj             46      0         0      
+       strncmp.c.obj                44      0         0      
+       unlink.c.obj                 44      0         0      
+       lseek.c.obj                  40      0         0      
+       memcmp.c.obj                 36      0         0      
+       memmov.c.obj                 36      0         0      
+       memchr.c.obj                 32      0         0      
+       memccpy.c.obj                28      0         0      
+       strcmp.c.obj                 24      0         0      
+       strchr.c.obj                 22      0         0      
+       s_copysign.c.obj             20      0         0      
+       strcpy.c.obj                 20      0         0      
+       strlen.c.obj                 20      0         0      
+       wcslen.c.obj                 18      0         0      
+       isdigit.c.obj                16      0         0      
+       isupper.c.obj                16      0         0      
+       isxdigit.c.obj               16      0         0      
+       toupper.c.obj                16      0         0      
+       copy_decompress_none.c.obj   14      0         0      
+       copy_zero_init.c.obj         12      0         0      
+       _lock.c.obj                  2       0         8      
+       pre_init.c.obj               4       0         0      
+       div0.asm.obj                 2       0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       10903   257       940    
+                                                             
+       Stack:                       0       0         2048   
+       Linker Generated:            0       406       0      
+    +--+----------------------------+-------+---------+---------+
+       Grand Total:                 92932   2366      159761 
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00017478 records: 2, size/record: 8, table size: 16
+	.data: load addr=000172f0, load size=00000172 bytes, run addr=20026c30, run size=000003e4 bytes, compression=lzss
+	.bss: load addr=00017470, load size=00000008 bytes, run addr=20000000, run size=0002642d bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00017464 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_lzss
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                                  
+-------   ----                                  
+00000c67  ADC0SS0_IRQHandler                    
+00000c67  ADC0SS1_IRQHandler                    
+00000c67  ADC0SS2_IRQHandler                    
+00000c67  ADC0SS3_IRQHandler                    
+00000c67  ADC1SS0_IRQHandler                    
+00000c67  ADC1SS1_IRQHandler                    
+00000c67  ADC1SS2_IRQHandler                    
+00000c67  ADC1SS3_IRQHandler                    
+00000c67  AES0_IRQHandler                       
+00000c67  BusFault_Handler                      
+00016d3d  C$$EXIT                               
+0001560b  C$$IO$$                               
+00000c67  CAN0_IRQHandler                       
+00000c67  CAN1_IRQHandler                       
+00000c67  COMP0_IRQHandler                      
+00000c67  COMP1_IRQHandler                      
+00000c67  COMP2_IRQHandler                      
+00000c67  DES0_IRQHandler                       
+00000c67  DebugMon_Handler                      
+00000c67  Default_Handler                       
+0000e2c9  EMAC0_IRQHandler                      
+0000e2c9  EMAC0_IRQHandler                      
+00000c67  EPI0_IRQHandler                       
+00000c67  FLASH_IRQHandler                      
+00016a01  FPUEnable                             
+00000c67  GPIOA_IRQHandler                      
+00000c67  GPIOB_IRQHandler                      
+00000c67  GPIOC_IRQHandler                      
+00000c67  GPIOD_IRQHandler                      
+00015e69  GPIODirModeSet                        
+00000c67  GPIOE_IRQHandler                      
+00000c67  GPIOF_IRQHandler                      
+00000c67  GPIOG_IRQHandler                      
+00000c67  GPIOH_IRQHandler                      
+00000c67  GPIOJ_IRQHandler                      
+00000c67  GPIOK_IRQHandler                      
+00000c67  GPIOL_IRQHandler                      
+00000c67  GPIOM_IRQHandler                      
+00000c67  GPION_IRQHandler                      
+00000c67  GPIOP0_IRQHandler                     
+00000c67  GPIOP1_IRQHandler                     
+00000c67  GPIOP2_IRQHandler                     
+00000c67  GPIOP3_IRQHandler                     
+00000c67  GPIOP4_IRQHandler                     
+00000c67  GPIOP5_IRQHandler                     
+00000c67  GPIOP6_IRQHandler                     
+00000c67  GPIOP7_IRQHandler                     
+00009695  GPIOPadConfigSet                      
+00015e95  GPIOPinConfigure                      
+00016d25  GPIOPinRead                           
+000167ad  GPIOPinTypeEthernetLED                
+000167c3  GPIOPinTypeGPIOInput                  
+000166ed  GPIOPinTypeGPIOOutput                 
+000167d9  GPIOPinTypeUART                       
+00016d2b  GPIOPinWrite                          
+00000c67  GPIOQ0_IRQHandler                     
+00000c67  GPIOQ1_IRQHandler                     
+00000c67  GPIOQ2_IRQHandler                     
+00000c67  GPIOQ3_IRQHandler                     
+00000c67  GPIOQ4_IRQHandler                     
+00000c67  GPIOQ5_IRQHandler                     
+00000c67  GPIOQ6_IRQHandler                     
+00000c67  GPIOQ7_IRQHandler                     
+00000c67  HIBERNATE_IRQHandler                  
+00014e49  HOSTclose                             
+00012c6d  HOSTlseek                             
+0001338d  HOSTopen                              
+00013ae1  HOSTread                              
+00012cd5  HOSTrename                            
+00014e8d  HOSTunlink                            
+00013b39  HOSTwrite                             
+00000c67  HardFault_Handler                     
+00000c67  I2C0_IRQHandler                       
+00000c67  I2C1_IRQHandler                       
+00000c67  I2C2_IRQHandler                       
+00000c67  I2C3_IRQHandler                       
+00000c67  I2C4_IRQHandler                       
+00000c67  I2C5_IRQHandler                       
+00000c67  I2C6_IRQHandler                       
+00000c67  I2C7_IRQHandler                       
+00000c67  I2C8_IRQHandler                       
+00000c67  I2C9_IRQHandler                       
+0001725c  IPV6_LINK_LOCAL_ADDR_PREFIX           
+0001726c  IPV6_LINK_LOCAL_ALL_NODES_ADDR        
+0001727c  IPV6_LINK_LOCAL_ALL_ROUTERS_ADDR      
+0001728c  IPV6_LOOPBACK_ADDR                    
+0001729c  IPV6_SOLICITED_NODE_ADDR_PREFIX       
+000172ac  IPV6_UNSPECIFIED_ADDR                 
+000133ed  IntDisable                            
+0001344d  IntEnable                             
+000164a1  IntPriorityGroupingSet                
+000162ad  IntPrioritySet                        
+000172df  MAC_BROADCAST_ADDR                    
+000172e5  MAC_UNSPECIFIED_ADDR                  
+00000c67  MemManage_Handler                     
+00000c67  NMI_Handler                           
+000167ef  PTLS_getBuf                           
+00016805  PTLS_setBuf                           
+00000c67  PWM0_0_IRQHandler                     
+00000c67  PWM0_1_IRQHandler                     
+00000c67  PWM0_2_IRQHandler                     
+00000c67  PWM0_3_IRQHandler                     
+00000c67  PWM0_FAULT_IRQHandler                 
+00000c67  PendSV_Handler                        
+20026c30  PowerMSP432E4_module                  
+00016705  Power_idleFunc                        
+00000c67  QEI0_IRQHandler                       
+00016b75  Reset_Handler                         
+00000c67  SHA0_IRQHandler                       
+00000c67  SSI0_IRQHandler                       
+00000c67  SSI1_IRQHandler                       
+00000c67  SSI2_IRQHandler                       
+00000c67  SSI3_IRQHandler                       
+00000c67  SVC_Handler                           
+00000c67  SYSCTL_IRQHandler                     
+00000c67  SYSEXC_IRQHandler                     
+00005545  SysCtlClockFreqSet                    
+00015879  SysCtlPeripheralEnable                
+000151e5  SysCtlPeripheralReady                 
+00014345  SysCtlPeripheralReset                 
+00000c67  SysTick_Handler                       
+20027010  SystemCoreClock                       
+0001671d  SystemInit                            
+00000c67  TAMPER0_IRQHandler                    
+00000c67  TIMER0A_IRQHandler                    
+00000c67  TIMER0B_IRQHandler                    
+00000c67  TIMER1A_IRQHandler                    
+00000c67  TIMER1B_IRQHandler                    
+00000c67  TIMER2A_IRQHandler                    
+00000c67  TIMER2B_IRQHandler                    
+00000c67  TIMER3A_IRQHandler                    
+00000c67  TIMER3B_IRQHandler                    
+00000c67  TIMER4A_IRQHandler                    
+00000c67  TIMER4B_IRQHandler                    
+00000c67  TIMER5A_IRQHandler                    
+00000c67  TIMER5B_IRQHandler                    
+00000c67  TIMER6A_IRQHandler                    
+00000c67  TIMER6B_IRQHandler                    
+00000c67  TIMER7A_IRQHandler                    
+00000c67  TIMER7B_IRQHandler                    
+00000c67  UART0_IRQHandler                      
+00000c67  UART1_IRQHandler                      
+00000c67  UART2_IRQHandler                      
+00000c67  UART3_IRQHandler                      
+00000c67  UART4_IRQHandler                      
+00000c67  UART5_IRQHandler                      
+00000c67  UART6_IRQHandler                      
+00000c67  UART7_IRQHandler                      
+00016c11  UARTCharPut                           
+00014fe1  UARTConfigSetExpClk                   
+000164c1  UARTDisable                           
+000168b5  UARTEnable                            
+00000c67  UDMAERR_IRQHandler                    
+00000c67  UDMA_IRQHandler                       
+00000c67  USB0_IRQHandler                       
+00000c67  UsageFault_Handler                    
+00000c67  WATCHDOG_IRQHandler                   
+20025ed8  __CIOBUF_                             
+20026c30  __STACK_END                           
+00000800  __STACK_SIZE                          
+20026630  __STACK_TOP                           
+00017478  __TI_CINIT_Base                       
+00017488  __TI_CINIT_Limit                      
+00017464  __TI_Handler_Table_Base               
+00017470  __TI_Handler_Table_Limit              
+00014ed1  __TI_auto_init_nobinit_nopinit        
+000158ad  __TI_cleanup                          
+20026fe4  __TI_cleanup_ptr                      
+00012251  __TI_closefile                        
+00012d3d  __TI_decompress_lzss                  
+00016b2f  __TI_decompress_none                  
+00014841  __TI_doflush                          
+20026fe8  __TI_dtors_ptr                        
+20026fec  __TI_enable_exit_profile_output       
+20026fd4  __TI_ft_end                           
+ffffffff  __TI_pprof_out_hndl                   
+00000209  __TI_printfi                          
+ffffffff  __TI_prof_data_size                   
+ffffffff  __TI_prof_data_start                  
+000158e1  __TI_readmsg                          
+00000000  __TI_static_base__                    
+200260b8  __TI_tmpnams                          
+000155dd  __TI_writemsg                         
+00013265  __TI_wrt_ok                           
+00016b99  __TI_zero_init                        
+0001116d  __aeabi_cdcmpeq                       
+0001116d  __aeabi_cdcmple                       
+000111f3  __aeabi_cdrcmple                      
+00014ce5  __aeabi_d2iz                          
+000063d7  __aeabi_dadd                          
+00009429  __aeabi_ddiv                          
+0000bfc9  __aeabi_dmul                          
+000063cd  __aeabi_dsub                          
+0001645d  __aeabi_errno_addr                    
+00015db1  __aeabi_i2d                           
+00007fe7  __aeabi_idiv0                         
+00007fe7  __aeabi_ldiv0                         
+00011e17  __aeabi_memclr                        
+00011e17  __aeabi_memclr4                       
+00011e17  __aeabi_memclr8                       
+00010329  __aeabi_memcpy                        
+00010329  __aeabi_memcpy4                       
+00010329  __aeabi_memcpy8                       
+00011e19  __aeabi_memset                        
+00011e19  __aeabi_memset4                       
+00011e19  __aeabi_memset8                       
+20026fe0  __aeabi_stderr                        
+20026fd8  __aeabi_stdin                         
+20026fdc  __aeabi_stdout                        
+0001075f  __aeabi_uldivmod                      
+ffffffff  __binit__                             
+ffffffff  __c_args__                            
+UNDEFED   __mpu_init                            
+20026430  __stack                               
+00015615  _c_int00_noargs                       
+00016ef4  _ctypes_                              
+20026e8c  _device                               
+20026d9c  _ftable                               
+20026ffc  _lock                                 
+00003d4b  _nop                                  
+20026f04  _stream                               
+UNDEFED   _system_post_cinit                    
+00016d39  _system_pre_init                      
+20027000  _unlock                               
+00016d3d  abort                                 
+0000eaf1  add_device                            
+00011725  arpCreateEntry                        
+00016c25  arpDumpPacket                         
+0000c975  arpEnqueuePacket                      
+00014aa1  arpFindEntry                          
+00015221  arpFlushCache                         
+0001552d  arpFlushQueuedPackets                 
+0001674d  arpInit                               
+0000d7a5  arpProcessPacket                      
+00009ff9  arpProcessReply                       
+00011bab  arpProcessRequest                     
+0000d879  arpResolve                            
+0000eba9  arpSendProbe                          
+00011d9d  arpSendQueuedPackets                  
+0000ec61  arpSendReply                          
+0000da1d  arpSendRequest                        
+00008689  arpTick                               
+200263f0  arpTickCounter                        
+0001488d  atoi                                  
+ffffffff  binit                                 
+00015ec1  blinkTask                             
+000137a9  close                                 
+000168c9  copysign                              
+000168c9  copysignl                             
+00014395  debugInit                             
+000122c5  debugRedirect                         
+00016b81  debugStreamClose                      
+00016a11  debugStreamOpen                       
+00016a21  debugStreamRead                       
+00016b21  debugStreamRename                     
+00016a31  debugStreamSeek                       
+00016b8d  debugStreamUnlink                     
+0001525d  debugStreamWrite                      
+0001192d  dhcpAddOption                         
+0000f439  dhcpClientChangeState                 
+000143e5  dhcpClientCheckTimeout                
+000157d5  dhcpClientComputeElapsedTime          
+00004891  dhcpClientDumpConfig                  
+00012339  dhcpClientLinkChangeEvent             
+0000c1c1  dhcpClientSendDecline                 
+0000ae51  dhcpClientSendDiscover                
+000075ad  dhcpClientSendRequest                 
+00013b91  dhcpClientStateBound                  
+00015299  dhcpClientStateInit                   
+000152d5  dhcpClientStateInitReboot             
+00011b2d  dhcpClientStateProbing                
+0000e07d  dhcpClientStateRebinding              
+0000e745  dhcpClientStateRebooting              
+0000fed9  dhcpClientStateRenewing               
+0000e801  dhcpClientStateRequesting             
+00010f4d  dhcpClientStateSelecting              
+000106c9  dhcpClientTick                        
+200263f4  dhcpClientTickCounter                 
+000172d8  dhcpOptionList                        
+20025904  dnsCache                              
+0000bcd3  dnsCompareName                        
+00011f85  dnsCreateEntry                        
+00015eed  dnsDeleteEntry                        
+0000f21d  dnsEncodeName                         
+00010fd5  dnsFindEntry                          
+00014f15  dnsFlushCache                         
+00016765  dnsInit                               
+0000a6b5  dnsParseName                          
+00001aad  dnsProcessResponse                    
+00003fa1  dnsResolve                            
+0000534d  dnsSendQuery                          
+000097c5  dnsTick                               
+200263f8  dnsTickCounter                        
+00010921  ethAcceptMacAddr                      
+00015cf9  ethAllocBuffer                        
+000123ad  ethCalcCrc                            
+0000c885  ethCalcCrcEx                          
+00010599  ethCheckDestAddr                      
+000119ad  ethDropMacAddr                        
+00016c2f  ethDumpHeader                         
+000168dd  ethInit                               
+00014435  ethPadFrame                           
+0001713c  ethPadding                            
+0000853d  ethProcessFrame                       
+0000cef9  ethSendFrame                          
+000160f9  ethUpdateErrorStats                   
+00016501  ethUpdateInStats                      
+000162d1  ethUpdateOutStats                     
+00014b35  exit                                  
+00015b19  finddevice                            
+00009561  formatSystemTime                      
+0001300d  fprintf                               
+0001564d  fputc                                 
+0000ac29  fputs                                 
+0001677d  free                                  
+00015915  freopen                               
+00013071  frexp                                 
+00013071  frexpl                                
+000130d5  fseek                                 
+0000af61  getHostByName                         
+00014f59  getdevice                             
+00016c39  icmpDumpEchoMessage                   
+00016c43  icmpDumpErrorMessage                  
+00016c4d  icmpDumpMessage                       
+0000bad3  icmpProcessEchoRequest                
+00012e75  icmpProcessMessage                    
+000083ed  icmpSendErrorMessage                  
+00013be9  icmpUpdateInStats                     
+00013c41  icmpUpdateOutStats                    
+00016c57  icmpv6DumpDestUnreachableMessage      
+00016c61  icmpv6DumpEchoMessage                 
+00016c6b  icmpv6DumpErrorMessage                
+00016c75  icmpv6DumpMessage                     
+00016c7f  icmpv6DumpPacketTooBigMessage         
+00015685  icmpv6ProcessDestUnreachable          
+00008a55  icmpv6ProcessEchoRequest              
+00008e11  icmpv6ProcessMessage                  
+0001290b  icmpv6ProcessPacketTooBig             
+00006a9d  icmpv6SendErrorMessage                
+00016c89  igmpDumpMessage                       
+000162f5  igmpInit                              
+000134ad  igmpJoinGroup                         
+0000dbbd  igmpLinkChangeEvent                   
+00012979  igmpProcessMessage                    
+0000cfe1  igmpProcessQueryMessage               
+00013805  igmpProcessReportMessage              
+0001681b  igmpRand                              
+0000deed  igmpSendReportMessage                 
+00011c27  igmpTick                              
+200263fc  igmpTickCounter                       
+00000000  interruptVectors                      
+00014b7d  ioInit                                
+00014bc5  ipAddrToString                        
+00015b49  ipAllocBuffer                         
+0000b8cf  ipCalcChecksum                        
+0000c78f  ipCalcChecksumEx                      
+00014485  ipCalcUpperLayerChecksumEx            
+000144d5  ipIsUnspecifiedAddr                   
+000136ed  ipSelectSourceAddr                    
+0001374b  ipSendDatagram                        
+0001429f  ipStringToAddr                        
+00014525  ipv4AddrToString                      
+00010ad7  ipv4CheckDestAddr                     
+0001647f  ipv4CheckSourceAddr                   
+00016c93  ipv4DumpHeader                        
+00016c9d  ipv4DumpHoleList                      
+000165bd  ipv4FindHole                          
+00015ab5  ipv4FlushFragQueue                    
+0000f649  ipv4FragTick                          
+20026400  ipv4FragTickCounter                   
+0000a9fd  ipv4FragmentDatagram                  
+000132c7  ipv4GetAddrScope                      
+00015949  ipv4GetBroadcastAddr                  
+0001350d  ipv4Init                              
+00013f57  ipv4IsBroadcastAddr                   
+0000d285  ipv4JoinMulticastGroup                
+00015311  ipv4LinkChangeEvent                   
+000147a5  ipv4MapMulticastAddrToMac             
+0000a7cd  ipv4ProcessDatagram                   
+0000cb51  ipv4ProcessPacket                     
+000020a9  ipv4ReassembleDatagram                
+00008b95  ipv4SearchFragQueue                   
+00006df1  ipv4SelectSourceAddr                  
+0001140b  ipv4SendDatagram                      
+000041e9  ipv4SendPacket                        
+000156bd  ipv4SetDefaultGateway                 
+000148d9  ipv4SetDnsServer                      
+00013c99  ipv4SetHostAddr                       
+00015f19  ipv4SetSubnetMask                     
+0000e509  ipv4StringToAddr                      
+00016581  ipv4UpdateInStats                     
+0001659f  ipv4UpdateOutStats                    
+0000ff79  ipv6AddDefaultRouter                  
+0000b071  ipv6AddPrefix                         
+0000bdd1  ipv6AddrToString                      
+0000c2b9  ipv6CheckDestAddr                     
+000166b9  ipv6CheckSourceAddr                   
+00012165  ipv6CompPrefix                        
+0001534d  ipv6ComputeSolicitedNodeAddr          
+00016ca7  ipv6DumpHeader                        
+00016cb1  ipv6DumpHoleList                      
+000165d9  ipv6FindHole                          
+00013861  ipv6FlushAddrList                     
+00014925  ipv6FlushDefaultRouterList            
+000168f1  ipv6FlushDnsServerList                
+00015b79  ipv6FlushFragQueue                    
+00013fad  ipv6FlushPrefixList                   
+0000f6f7  ipv6FragTick                          
+20026404  ipv6FragTickCounter                   
+00009b55  ipv6FragmentDatagram                  
+00014dbd  ipv6GenerateLinkLocalAddr             
+00012da5  ipv6GetAddrScope                      
+00011279  ipv6GetCommonPrefixLength             
+00016521  ipv6GetMulticastAddrScope             
+00015d27  ipv6GetPathMtu                        
+000100b9  ipv6Init                              
+00013cf1  ipv6IsAnycastAddr                     
+00012edb  ipv6IsOnLink                          
+00014575  ipv6IsTentativeAddr                   
+0000d361  ipv6JoinMulticastGroup                
+0000fc49  ipv6LeaveMulticastGroup               
+0000dfb5  ipv6LinkChangeEvent                   
+00014e03  ipv6MapMulticastAddrToMac             
+000169b9  ipv6ParseAuthHeader                   
+00010155  ipv6ParseDestOptHeader                
+000169cb  ipv6ParseEspHeader                    
+0000108d  ipv6ParseFragmentHeader               
+0000de21  ipv6ParseHopByHopOptHeader            
+00009c81  ipv6ParseOptions                      
+0000f9a7  ipv6ParseRoutingHeader                
+00003881  ipv6ProcessPacket                     
+000127bd  ipv6RemoveDefaultRouter               
+00012421  ipv6RemovePrefix                      
+00008f49  ipv6SearchFragQueue                   
+0000729d  ipv6SelectSourceAddr                  
+00010b67  ipv6SendDatagram                      
+0000238d  ipv6SendPacket                        
+000098f5  ipv6SetAddr                           
+00010bf9  ipv6SetDefaultRouter                  
+00014001  ipv6SetDnsServer                      
+00012495  ipv6SetGlobalAddr                     
+000129e9  ipv6SetLinkLocalAddr                  
+0000fced  ipv6SetPrefix                         
+00005735  ipv6StringToAddr                      
+00016831  ipv6UpdateInStats                     
+00016847  ipv6UpdateOutStats                    
+00015d55  ipv6UpdatePathMtu                     
+00016a41  isdigit                               
+00016a51  isupper                               
+00016a61  isxdigit                              
+0000b181  ldexp                                 
+0000b181  ldexpl                                
+00016121  lseek                                 
+00014055  ltoa                                  
+000142f1  macAddrToEui64                        
+0000c3b1  macStringToAddr                       
+00000c69  main                                  
+00015023  malloc                                
+00014c0d  memPoolAlloc                          
+00016ba5  memPoolFree                           
+00016d41  memPoolInit                           
+000165f5  memccpy                               
+00016541  memchr                                
+00016319  memcmp                                
+00010329  memcpy                                
+0001633d  memmove                               
+00011e1f  memset                                
+00016cbb  mldDumpMessage                        
+00016bb1  mldInit                               
+0000f7a5  mldLinkChangeEvent                    
+0000ad3d  mldProcessListenerQuery               
+0000fe35  mldProcessListenerReport              
+0001685d  mldRand                               
+0000cc3d  mldSendListenerDone                   
+0000cd29  mldSendListenerReport                 
+0001356d  mldStartListening                     
+00016361  mldStopListening                      
+00013329  mldTick                               
+20026408  mldTickCounter                        
+00010e35  modbusClientCheckResp                 
+0000b5bf  modbusClientConnect                   
+20025ca4  modbusClientContext                   
+00016385  modbusClientDeinit                    
+000160a5  modbusClientDisconnect                
+000135cd  modbusClientFormatMbapHeader          
+000145c5  modbusClientFormatReadHoldingRegsReq  
+00010d19  modbusClientFormatWriteMultipleRegsReq
+000163a9  modbusClientGetExceptionCode          
+00016b3d  modbusClientGetRequestPdu             
+0001597d  modbusClientGetResponsePdu            
+000156f5  modbusClientInit                      
+00016149  modbusClientParseExceptionResp        
+00013d49  modbusClientParseMbapHeader           
+000117a7  modbusClientParseReadHoldingRegsResp  
+000139d1  modbusClientParseWriteMultipleRegsResp
+000101f1  modbusClientReadHoldingRegs           
+00016611  modbusClientSetTimeout                
+000028f9  modbusClientTest                      
+00003d4d  modbusClientTransaction               
+00010019  modbusClientWriteMultipleRegs         
+00016b4b  modbusDumpRequestPdu                  
+00016b59  modbusDumpResponsePdu                 
+00012509  msp432e4EthCalcCrc                    
+00016bbd  msp432e4EthDisableIrq                 
+0001717c  msp432e4EthDriver                     
+00016171  msp432e4EthDumpPhyReg                 
+00016bc9  msp432e4EthEnableIrq                  
+0000becd  msp432e4EthEventHandler               
+00005e95  msp432e4EthInit                       
+00007111  msp432e4EthInitDmaDesc                
+00015ba9  msp432e4EthInitGpio                   
+000140a9  msp432e4EthReadPhyReg                 
+0000f2d1  msp432e4EthReceivePacket              
+0000fa51  msp432e4EthSendPacket                 
+00016cc5  msp432e4EthTick                       
+00011a2d  msp432e4EthUpdateMacAddrFilter        
+00013da1  msp432e4EthWritePhyReg                
+00009a25  nbnsCompareName                       
+0000e389  nbnsEncodeName                        
+00016199  nbnsInit                              
+00009dad  nbnsParseName                         
+000112ff  nbnsProcessMessage                    
+000109b3  nbnsProcessQuery                      
+00009081  nbnsProcessResponse                   
+00008149  nbnsResolve                           
+0000a239  nbnsSendQuery                         
+000087d1  nbnsSendResponse                      
+00011ca3  ndpAddOption                          
+00015389  ndpCheckOptions                       
+00011491  ndpCreateDestCacheEntry               
+00011829  ndpCreateNeighborCacheEntry           
+00016ccf  ndpDumpNeighborAdvMessage             
+00016cd9  ndpDumpNeighborSolMessage             
+00016ce3  ndpDumpRedirectMessage                
+00016ced  ndpDumpRouterAdvMessage               
+00016cf7  ndpDumpRouterSolMessage               
+0000ab13  ndpEnqueuePacket                      
+00014c55  ndpFindDestCacheEntry                 
+00014615  ndpFindNeighborCacheEntry             
+00016873  ndpFlushDestCache                     
+000153c5  ndpFlushNeighborCache                 
+000126d9  ndpFlushQueuedPackets                 
+00013139  ndpGetOption                          
+000147f3  ndpInit                               
+0001257d  ndpIsFirstHopRouter                   
+00013df9  ndpLinkChangeEvent                    
+0000fd91  ndpParsePrefixInfoOption              
+00004ac1  ndpProcessNeighborAdv                 
+00004f15  ndpProcessNeighborSol                 
+00004cf1  ndpProcessRedirect                    
+00002ba1  ndpProcessRouterAdv                   
+0000d6cf  ndpResolve                            
+0000c4a9  ndpSelectDefaultRouter                
+00013a2b  ndpSelectNextHop                      
+00006c49  ndpSendNeighborAdv                    
+000091b9  ndpSendNeighborSol                    
+0001028d  ndpSendQueuedPackets                  
+0000a359  ndpSendRouterSol                      
+0000ed19  ndpTick                               
+2002640c  ndpTickCounter                        
+00006f81  ndpUpdateAddrList                     
+00011d21  ndpUpdateDefaultRouterList            
+00007ba9  ndpUpdateNeighborCache                
+00012a55  ndpUpdateNextHop                      
+0001319d  ndpUpdatePrefixList                   
+00013e51  netBufferAlloc                        
+000140fd  netBufferAppend                       
+00014151  netBufferAt                           
+0000bbd3  netBufferConcat                       
+00007731  netBufferCopy                         
+00016905  netBufferFree                         
+0001580b  netBufferGetLength                    
+0000f0b1  netBufferRead                         
+00008913  netBufferSetLength                    
+0000f167  netBufferWrite                        
+0000829d  netConfigInterface                    
+20026410  netEvent                              
+00016d15  netGetDefaultInterface                
+0001105d  netGetRand                            
+00015ae7  netGetRandRange                       
+00006059  netInit                               
+0001662d  netInitRand                           
+20024cf8  netInterface                          
+00012ac1  netInvokeLinkChangeCallback           
+20026414  netMutex                              
+00015f45  netSetDriver                          
+000159b1  netSetHostname                        
+000159e5  netSetInterfaceName                   
+000150a9  netSetMacAddr                         
+00007fe9  netTask                               
+20026418  netTaskHandle                         
+00002e49  netTick                               
+00016bd5  nicGetLogicalInterface                
+00016be1  nicGetPhysicalInterface               
+00002649  nicNotifyLinkChange                   
+000118ab  nicProcessPacket                      
+0001274b  nicSendPacket                         
+0001572d  nicTick                               
+2002641c  nicTickCounter                        
+00014c9d  nicUpdateMacAddrFilter                
+0000e8bd  open                                  
+000169dd  osAcquireMutex                        
+00016a71  osAllocMem                            
+000151a7  osCreateEvent                         
+00016649  osCreateMutex                         
+00015567  osCreateTask                          
+00016bed  osDelayTask                           
+00016919  osDeleteEvent                         
+00016a81  osFreeMem                             
+00016bf9  osGetSystemTime                       
+000078b3  osInitKernel                          
+0001692d  osReleaseMutex                        
+00016a91  osResetEvent                          
+00016aa1  osResumeAllTasks                      
+00016941  osSetEvent                            
+00016889  osSetEventFromIsr                     
+00016d1d  osStartKernel                         
+00016ab1  osSuspendAllTasks                     
+00015d83  osWaitForEvent                        
+200263e4  parmbuf                               
+00007a31  pvPortMalloc                          
+00015479  pvTaskGetThreadLocalStoragePointer    
+00016665  pvTaskIncrementMutexHeldCount         
+20026f54  pxCurrentTCB                          
+0001362d  pxPortInitialiseStack                 
+00015ff5  remove                                
+0000b181  scalbn                                
+0000b181  scalbnl                               
+0000d43d  setvbuf                               
+00004425  slaacDumpConfig                       
+00010c89  slaacGenerateLinkLocalAddr            
+000141a5  slaacLinkChangeEvent                  
+00003399  slaacParsePrefixInfoOption            
+0000c5a1  slaacParseRouterAdv                   
+00016681  socketBindToInterface                 
+00012b2d  socketClose                           
+00010631  socketConnect                         
+00011aad  socketInit                            
+0000b291  socketOpen                            
+00015ddf  socketReceive                         
+0000ee89  socketReceiveEx                       
+00015e0d  socketSend                            
+00011599  socketSendTo                          
+000161c1  socketSetTimeout                      
+20022400  socketTable                           
+000150e9  sprintf                               
+00014665  strSafeCopy                           
+00015e3b  strcasecmp                            
+0001689f  strchr                                
+00016795  strcmp                                
+00016969  strcpy                                
+0001697d  strlen                                
+000154b5  strncasecmp                           
+00015f71  strncmp                               
+00015841  strncpy                               
+000163f1  swapInt16                             
+00015f9d  swapInt32                             
+0001161d  tcpAbort                              
+0000d519  tcpAddOption                          
+00015065  tcpChangeState                        
+00003aed  tcpCheckAck                           
+0000b7cb  tcpCheckSequenceNumber                
+00013a85  tcpCheckSyn                           
+0000b4b1  tcpComputeRto                         
+00006583  tcpConnect                            
+000161e9  tcpDeleteControlBlock                 
+00016ac1  tcpDumpHeader                         
+00015bd9  tcpFastLossRecovery                   
+000121db  tcpFastRecovery                       
+00012e0d  tcpFastRetransmit                     
+000155a1  tcpFlushRetransmitQueue               
+00015c09  tcpFlushSynQueue                      
+000146b5  tcpGetDynamicPort                     
+000107f5  tcpGetOption                          
+00016ad1  tcpInit                               
+00014d2d  tcpIsDuplicateAck                     
+0000ea35  tcpIsDuplicateSyn                     
+00010ec1  tcpKillOldestConnection               
+0000465d  tcpNagleAlgo                          
+0000141d  tcpProcessSegment                     
+0000b6c5  tcpProcessSegmentData                 
+00010da7  tcpReadRxBuffer                       
+00010a45  tcpReadTxBuffer                       
+00005921  tcpReceive                            
+0000d0c5  tcpRetransmitSegment                  
+00007e7f  tcpSend                               
+00006739  tcpSendResetSegment                   
+00001dbd  tcpSendSegment                        
+0001368d  tcpStateCloseWait                     
+0001625f  tcpStateClosed                        
+00012b99  tcpStateClosing                       
+0000e205  tcpStateEstablished                   
+0000c699  tcpStateFinWait1                      
+0000e685  tcpStateFinWait2                      
+00014705  tcpStateLastAck                       
+00007425  tcpStateListen                        
+0000f851  tcpStateSynReceived                   
+000068eb  tcpStateSynSent                       
+00011385  tcpStateTimeWait                      
+00001765  tcpTick                               
+20026420  tcpTickCounter                        
+00015fc9  tcpTimerElapsed                       
+00016b67  tcpTimerRunning                       
+0001669d  tcpTimerStart                         
+00016ae1  tcpTimerStop                          
+00005135  tcpUpdateEvents                       
+0000e449  tcpUpdateReceiveWindow                
+0000dc89  tcpUpdateRetransmitQueue              
+00009ed7  tcpUpdateSackBlocks                   
+0000c0c5  tcpUpdateSendWindow                   
+00014a09  tcpWaitForEvents                      
+000104fd  tcpWriteRxBuffer                      
+000110e5  tcpWriteTxBuffer                      
+00016af1  toupper                               
+00016285  udpAllocBuffer                        
+00012075  udpAttachRxCallback                   
+20026424  udpCallbackMutex                      
+20026158  udpCallbackTable                      
+000120ed  udpDetachRxCallback                   
+00016d01  udpDumpHeader                         
+00014755  udpGetDynamicPort                     
+00015c39  udpInit                               
+0000ef41  udpInvokeRxCallback                   
+000030f1  udpProcessDatagram                    
+0000dd55  udpReceiveDatagram                    
+00011e91  udpSendDatagram                       
+00007d15  udpSendDatagramEx                     
+00012c03  udpUpdateEvents                       
+000172c8  ulMaxSyscallInterruptPriority         
+0000d605  ulPortGetIPSR                         
+00015ff5  unlink                                
+00016021  userTask                              
+00014d75  uxListRemove                          
+0000853b  vApplicationMallocFailedHook          
+00015c69  vListInitialise                       
+00016b01  vListInitialiseItem                   
+00012f41  vListInsert                           
+000154f1  vListInsertEnd                        
+0000d6c1  vPortEnableVFP                        
+00014a55  vPortEnterCritical                    
+00015c99  vPortExitCritical                     
+000103c5  vPortFree                             
+0000d67d  vPortSVCHandler                       
+00013ea9  vPortSetupTimerInterrupt              
+0000d69d  vPortStartFirstTask                   
+00016d0b  vPortSuppressTicksAndSleep            
+00012665  vPortValidateInterruptPriority        
+00016415  vQueueDelete                          
+00013919  vQueueWaitForMessageRestricted        
+00013975  vTaskDelay                            
+00016439  vTaskInternalSetTimeOutState          
+00016c05  vTaskMissedYield                      
+00015a4d  vTaskPlaceOnEventList                 
+00015129  vTaskPlaceOnEventListRestricted       
+0000b3a1  vTaskPriorityDisinheritAfterTimeout   
+00015a81  vTaskSetThreadLocalStoragePointer     
+0001088d  vTaskStartScheduler                   
+00016b11  vTaskSuspendAll                       
+00010461  vTaskSwitchContext                    
+000169ef  wcslen                                
+00016211  write                                 
+0000d61d  xPortPendSVHandler                    
+0000daed  xPortStartScheduler                   
+0001604d  xPortSysTickHandler                   
+00016079  xQueueCreateMutex                     
+00012fa7  xQueueGenericCreate                   
+0000eff9  xQueueGenericReset                    
+00006215  xQueueGenericSend                     
+0000b9d1  xQueueGenericSendFromISR              
+0000ca63  xQueueGiveFromISR                     
+000078b5  xQueueReceive                         
+00005cc5  xQueueSemaphoreTake                   
+0000f599  xTaskCheckForTimeOut                  
+00011f0b  xTaskCreate                           
+00016991  xTaskGetCurrentTaskHandle             
+00015cc9  xTaskGetSchedulerState                
+000169a5  xTaskGetTickCount                     
+000092f1  xTaskIncrementTick                    
+0000d1a5  xTaskPriorityDisinherit               
+0000ce11  xTaskPriorityInherit                  
+0000fba1  xTaskRemoveFromEventList              
+0000a599  xTaskResumeAll                        
+000141f9  xTimerCreateTimerTask                 
+000116a1  xTimerGenericCommand                  
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                                  
+-------   ----                                  
+00000000  __TI_static_base__                    
+00000000  interruptVectors                      
+00000209  __TI_printfi                          
+00000800  __STACK_SIZE                          
+00000c67  ADC0SS0_IRQHandler                    
+00000c67  ADC0SS1_IRQHandler                    
+00000c67  ADC0SS2_IRQHandler                    
+00000c67  ADC0SS3_IRQHandler                    
+00000c67  ADC1SS0_IRQHandler                    
+00000c67  ADC1SS1_IRQHandler                    
+00000c67  ADC1SS2_IRQHandler                    
+00000c67  ADC1SS3_IRQHandler                    
+00000c67  AES0_IRQHandler                       
+00000c67  BusFault_Handler                      
+00000c67  CAN0_IRQHandler                       
+00000c67  CAN1_IRQHandler                       
+00000c67  COMP0_IRQHandler                      
+00000c67  COMP1_IRQHandler                      
+00000c67  COMP2_IRQHandler                      
+00000c67  DES0_IRQHandler                       
+00000c67  DebugMon_Handler                      
+00000c67  Default_Handler                       
+00000c67  EPI0_IRQHandler                       
+00000c67  FLASH_IRQHandler                      
+00000c67  GPIOA_IRQHandler                      
+00000c67  GPIOB_IRQHandler                      
+00000c67  GPIOC_IRQHandler                      
+00000c67  GPIOD_IRQHandler                      
+00000c67  GPIOE_IRQHandler                      
+00000c67  GPIOF_IRQHandler                      
+00000c67  GPIOG_IRQHandler                      
+00000c67  GPIOH_IRQHandler                      
+00000c67  GPIOJ_IRQHandler                      
+00000c67  GPIOK_IRQHandler                      
+00000c67  GPIOL_IRQHandler                      
+00000c67  GPIOM_IRQHandler                      
+00000c67  GPION_IRQHandler                      
+00000c67  GPIOP0_IRQHandler                     
+00000c67  GPIOP1_IRQHandler                     
+00000c67  GPIOP2_IRQHandler                     
+00000c67  GPIOP3_IRQHandler                     
+00000c67  GPIOP4_IRQHandler                     
+00000c67  GPIOP5_IRQHandler                     
+00000c67  GPIOP6_IRQHandler                     
+00000c67  GPIOP7_IRQHandler                     
+00000c67  GPIOQ0_IRQHandler                     
+00000c67  GPIOQ1_IRQHandler                     
+00000c67  GPIOQ2_IRQHandler                     
+00000c67  GPIOQ3_IRQHandler                     
+00000c67  GPIOQ4_IRQHandler                     
+00000c67  GPIOQ5_IRQHandler                     
+00000c67  GPIOQ6_IRQHandler                     
+00000c67  GPIOQ7_IRQHandler                     
+00000c67  HIBERNATE_IRQHandler                  
+00000c67  HardFault_Handler                     
+00000c67  I2C0_IRQHandler                       
+00000c67  I2C1_IRQHandler                       
+00000c67  I2C2_IRQHandler                       
+00000c67  I2C3_IRQHandler                       
+00000c67  I2C4_IRQHandler                       
+00000c67  I2C5_IRQHandler                       
+00000c67  I2C6_IRQHandler                       
+00000c67  I2C7_IRQHandler                       
+00000c67  I2C8_IRQHandler                       
+00000c67  I2C9_IRQHandler                       
+00000c67  MemManage_Handler                     
+00000c67  NMI_Handler                           
+00000c67  PWM0_0_IRQHandler                     
+00000c67  PWM0_1_IRQHandler                     
+00000c67  PWM0_2_IRQHandler                     
+00000c67  PWM0_3_IRQHandler                     
+00000c67  PWM0_FAULT_IRQHandler                 
+00000c67  PendSV_Handler                        
+00000c67  QEI0_IRQHandler                       
+00000c67  SHA0_IRQHandler                       
+00000c67  SSI0_IRQHandler                       
+00000c67  SSI1_IRQHandler                       
+00000c67  SSI2_IRQHandler                       
+00000c67  SSI3_IRQHandler                       
+00000c67  SVC_Handler                           
+00000c67  SYSCTL_IRQHandler                     
+00000c67  SYSEXC_IRQHandler                     
+00000c67  SysTick_Handler                       
+00000c67  TAMPER0_IRQHandler                    
+00000c67  TIMER0A_IRQHandler                    
+00000c67  TIMER0B_IRQHandler                    
+00000c67  TIMER1A_IRQHandler                    
+00000c67  TIMER1B_IRQHandler                    
+00000c67  TIMER2A_IRQHandler                    
+00000c67  TIMER2B_IRQHandler                    
+00000c67  TIMER3A_IRQHandler                    
+00000c67  TIMER3B_IRQHandler                    
+00000c67  TIMER4A_IRQHandler                    
+00000c67  TIMER4B_IRQHandler                    
+00000c67  TIMER5A_IRQHandler                    
+00000c67  TIMER5B_IRQHandler                    
+00000c67  TIMER6A_IRQHandler                    
+00000c67  TIMER6B_IRQHandler                    
+00000c67  TIMER7A_IRQHandler                    
+00000c67  TIMER7B_IRQHandler                    
+00000c67  UART0_IRQHandler                      
+00000c67  UART1_IRQHandler                      
+00000c67  UART2_IRQHandler                      
+00000c67  UART3_IRQHandler                      
+00000c67  UART4_IRQHandler                      
+00000c67  UART5_IRQHandler                      
+00000c67  UART6_IRQHandler                      
+00000c67  UART7_IRQHandler                      
+00000c67  UDMAERR_IRQHandler                    
+00000c67  UDMA_IRQHandler                       
+00000c67  USB0_IRQHandler                       
+00000c67  UsageFault_Handler                    
+00000c67  WATCHDOG_IRQHandler                   
+00000c69  main                                  
+0000108d  ipv6ParseFragmentHeader               
+0000141d  tcpProcessSegment                     
+00001765  tcpTick                               
+00001aad  dnsProcessResponse                    
+00001dbd  tcpSendSegment                        
+000020a9  ipv4ReassembleDatagram                
+0000238d  ipv6SendPacket                        
+00002649  nicNotifyLinkChange                   
+000028f9  modbusClientTest                      
+00002ba1  ndpProcessRouterAdv                   
+00002e49  netTick                               
+000030f1  udpProcessDatagram                    
+00003399  slaacParsePrefixInfoOption            
+00003881  ipv6ProcessPacket                     
+00003aed  tcpCheckAck                           
+00003d4b  _nop                                  
+00003d4d  modbusClientTransaction               
+00003fa1  dnsResolve                            
+000041e9  ipv4SendPacket                        
+00004425  slaacDumpConfig                       
+0000465d  tcpNagleAlgo                          
+00004891  dhcpClientDumpConfig                  
+00004ac1  ndpProcessNeighborAdv                 
+00004cf1  ndpProcessRedirect                    
+00004f15  ndpProcessNeighborSol                 
+00005135  tcpUpdateEvents                       
+0000534d  dnsSendQuery                          
+00005545  SysCtlClockFreqSet                    
+00005735  ipv6StringToAddr                      
+00005921  tcpReceive                            
+00005cc5  xQueueSemaphoreTake                   
+00005e95  msp432e4EthInit                       
+00006059  netInit                               
+00006215  xQueueGenericSend                     
+000063cd  __aeabi_dsub                          
+000063d7  __aeabi_dadd                          
+00006583  tcpConnect                            
+00006739  tcpSendResetSegment                   
+000068eb  tcpStateSynSent                       
+00006a9d  icmpv6SendErrorMessage                
+00006c49  ndpSendNeighborAdv                    
+00006df1  ipv4SelectSourceAddr                  
+00006f81  ndpUpdateAddrList                     
+00007111  msp432e4EthInitDmaDesc                
+0000729d  ipv6SelectSourceAddr                  
+00007425  tcpStateListen                        
+000075ad  dhcpClientSendRequest                 
+00007731  netBufferCopy                         
+000078b3  osInitKernel                          
+000078b5  xQueueReceive                         
+00007a31  pvPortMalloc                          
+00007ba9  ndpUpdateNeighborCache                
+00007d15  udpSendDatagramEx                     
+00007e7f  tcpSend                               
+00007fe7  __aeabi_idiv0                         
+00007fe7  __aeabi_ldiv0                         
+00007fe9  netTask                               
+00008149  nbnsResolve                           
+0000829d  netConfigInterface                    
+000083ed  icmpSendErrorMessage                  
+0000853b  vApplicationMallocFailedHook          
+0000853d  ethProcessFrame                       
+00008689  arpTick                               
+000087d1  nbnsSendResponse                      
+00008913  netBufferSetLength                    
+00008a55  icmpv6ProcessEchoRequest              
+00008b95  ipv4SearchFragQueue                   
+00008e11  icmpv6ProcessMessage                  
+00008f49  ipv6SearchFragQueue                   
+00009081  nbnsProcessResponse                   
+000091b9  ndpSendNeighborSol                    
+000092f1  xTaskIncrementTick                    
+00009429  __aeabi_ddiv                          
+00009561  formatSystemTime                      
+00009695  GPIOPadConfigSet                      
+000097c5  dnsTick                               
+000098f5  ipv6SetAddr                           
+00009a25  nbnsCompareName                       
+00009b55  ipv6FragmentDatagram                  
+00009c81  ipv6ParseOptions                      
+00009dad  nbnsParseName                         
+00009ed7  tcpUpdateSackBlocks                   
+00009ff9  arpProcessReply                       
+0000a239  nbnsSendQuery                         
+0000a359  ndpSendRouterSol                      
+0000a599  xTaskResumeAll                        
+0000a6b5  dnsParseName                          
+0000a7cd  ipv4ProcessDatagram                   
+0000a9fd  ipv4FragmentDatagram                  
+0000ab13  ndpEnqueuePacket                      
+0000ac29  fputs                                 
+0000ad3d  mldProcessListenerQuery               
+0000ae51  dhcpClientSendDiscover                
+0000af61  getHostByName                         
+0000b071  ipv6AddPrefix                         
+0000b181  ldexp                                 
+0000b181  ldexpl                                
+0000b181  scalbn                                
+0000b181  scalbnl                               
+0000b291  socketOpen                            
+0000b3a1  vTaskPriorityDisinheritAfterTimeout   
+0000b4b1  tcpComputeRto                         
+0000b5bf  modbusClientConnect                   
+0000b6c5  tcpProcessSegmentData                 
+0000b7cb  tcpCheckSequenceNumber                
+0000b8cf  ipCalcChecksum                        
+0000b9d1  xQueueGenericSendFromISR              
+0000bad3  icmpProcessEchoRequest                
+0000bbd3  netBufferConcat                       
+0000bcd3  dnsCompareName                        
+0000bdd1  ipv6AddrToString                      
+0000becd  msp432e4EthEventHandler               
+0000bfc9  __aeabi_dmul                          
+0000c0c5  tcpUpdateSendWindow                   
+0000c1c1  dhcpClientSendDecline                 
+0000c2b9  ipv6CheckDestAddr                     
+0000c3b1  macStringToAddr                       
+0000c4a9  ndpSelectDefaultRouter                
+0000c5a1  slaacParseRouterAdv                   
+0000c699  tcpStateFinWait1                      
+0000c78f  ipCalcChecksumEx                      
+0000c885  ethCalcCrcEx                          
+0000c975  arpEnqueuePacket                      
+0000ca63  xQueueGiveFromISR                     
+0000cb51  ipv4ProcessPacket                     
+0000cc3d  mldSendListenerDone                   
+0000cd29  mldSendListenerReport                 
+0000ce11  xTaskPriorityInherit                  
+0000cef9  ethSendFrame                          
+0000cfe1  igmpProcessQueryMessage               
+0000d0c5  tcpRetransmitSegment                  
+0000d1a5  xTaskPriorityDisinherit               
+0000d285  ipv4JoinMulticastGroup                
+0000d361  ipv6JoinMulticastGroup                
+0000d43d  setvbuf                               
+0000d519  tcpAddOption                          
+0000d605  ulPortGetIPSR                         
+0000d61d  xPortPendSVHandler                    
+0000d67d  vPortSVCHandler                       
+0000d69d  vPortStartFirstTask                   
+0000d6c1  vPortEnableVFP                        
+0000d6cf  ndpResolve                            
+0000d7a5  arpProcessPacket                      
+0000d879  arpResolve                            
+0000da1d  arpSendRequest                        
+0000daed  xPortStartScheduler                   
+0000dbbd  igmpLinkChangeEvent                   
+0000dc89  tcpUpdateRetransmitQueue              
+0000dd55  udpReceiveDatagram                    
+0000de21  ipv6ParseHopByHopOptHeader            
+0000deed  igmpSendReportMessage                 
+0000dfb5  ipv6LinkChangeEvent                   
+0000e07d  dhcpClientStateRebinding              
+0000e205  tcpStateEstablished                   
+0000e2c9  EMAC0_IRQHandler                      
+0000e2c9  EMAC0_IRQHandler                      
+0000e389  nbnsEncodeName                        
+0000e449  tcpUpdateReceiveWindow                
+0000e509  ipv4StringToAddr                      
+0000e685  tcpStateFinWait2                      
+0000e745  dhcpClientStateRebooting              
+0000e801  dhcpClientStateRequesting             
+0000e8bd  open                                  
+0000ea35  tcpIsDuplicateSyn                     
+0000eaf1  add_device                            
+0000eba9  arpSendProbe                          
+0000ec61  arpSendReply                          
+0000ed19  ndpTick                               
+0000ee89  socketReceiveEx                       
+0000ef41  udpInvokeRxCallback                   
+0000eff9  xQueueGenericReset                    
+0000f0b1  netBufferRead                         
+0000f167  netBufferWrite                        
+0000f21d  dnsEncodeName                         
+0000f2d1  msp432e4EthReceivePacket              
+0000f439  dhcpClientChangeState                 
+0000f599  xTaskCheckForTimeOut                  
+0000f649  ipv4FragTick                          
+0000f6f7  ipv6FragTick                          
+0000f7a5  mldLinkChangeEvent                    
+0000f851  tcpStateSynReceived                   
+0000f9a7  ipv6ParseRoutingHeader                
+0000fa51  msp432e4EthSendPacket                 
+0000fba1  xTaskRemoveFromEventList              
+0000fc49  ipv6LeaveMulticastGroup               
+0000fced  ipv6SetPrefix                         
+0000fd91  ndpParsePrefixInfoOption              
+0000fe35  mldProcessListenerReport              
+0000fed9  dhcpClientStateRenewing               
+0000ff79  ipv6AddDefaultRouter                  
+00010019  modbusClientWriteMultipleRegs         
+000100b9  ipv6Init                              
+00010155  ipv6ParseDestOptHeader                
+000101f1  modbusClientReadHoldingRegs           
+0001028d  ndpSendQueuedPackets                  
+00010329  __aeabi_memcpy                        
+00010329  __aeabi_memcpy4                       
+00010329  __aeabi_memcpy8                       
+00010329  memcpy                                
+000103c5  vPortFree                             
+00010461  vTaskSwitchContext                    
+000104fd  tcpWriteRxBuffer                      
+00010599  ethCheckDestAddr                      
+00010631  socketConnect                         
+000106c9  dhcpClientTick                        
+0001075f  __aeabi_uldivmod                      
+000107f5  tcpGetOption                          
+0001088d  vTaskStartScheduler                   
+00010921  ethAcceptMacAddr                      
+000109b3  nbnsProcessQuery                      
+00010a45  tcpReadTxBuffer                       
+00010ad7  ipv4CheckDestAddr                     
+00010b67  ipv6SendDatagram                      
+00010bf9  ipv6SetDefaultRouter                  
+00010c89  slaacGenerateLinkLocalAddr            
+00010d19  modbusClientFormatWriteMultipleRegsReq
+00010da7  tcpReadRxBuffer                       
+00010e35  modbusClientCheckResp                 
+00010ec1  tcpKillOldestConnection               
+00010f4d  dhcpClientStateSelecting              
+00010fd5  dnsFindEntry                          
+0001105d  netGetRand                            
+000110e5  tcpWriteTxBuffer                      
+0001116d  __aeabi_cdcmpeq                       
+0001116d  __aeabi_cdcmple                       
+000111f3  __aeabi_cdrcmple                      
+00011279  ipv6GetCommonPrefixLength             
+000112ff  nbnsProcessMessage                    
+00011385  tcpStateTimeWait                      
+0001140b  ipv4SendDatagram                      
+00011491  ndpCreateDestCacheEntry               
+00011599  socketSendTo                          
+0001161d  tcpAbort                              
+000116a1  xTimerGenericCommand                  
+00011725  arpCreateEntry                        
+000117a7  modbusClientParseReadHoldingRegsResp  
+00011829  ndpCreateNeighborCacheEntry           
+000118ab  nicProcessPacket                      
+0001192d  dhcpAddOption                         
+000119ad  ethDropMacAddr                        
+00011a2d  msp432e4EthUpdateMacAddrFilter        
+00011aad  socketInit                            
+00011b2d  dhcpClientStateProbing                
+00011bab  arpProcessRequest                     
+00011c27  igmpTick                              
+00011ca3  ndpAddOption                          
+00011d21  ndpUpdateDefaultRouterList            
+00011d9d  arpSendQueuedPackets                  
+00011e17  __aeabi_memclr                        
+00011e17  __aeabi_memclr4                       
+00011e17  __aeabi_memclr8                       
+00011e19  __aeabi_memset                        
+00011e19  __aeabi_memset4                       
+00011e19  __aeabi_memset8                       
+00011e1f  memset                                
+00011e91  udpSendDatagram                       
+00011f0b  xTaskCreate                           
+00011f85  dnsCreateEntry                        
+00012075  udpAttachRxCallback                   
+000120ed  udpDetachRxCallback                   
+00012165  ipv6CompPrefix                        
+000121db  tcpFastRecovery                       
+00012251  __TI_closefile                        
+000122c5  debugRedirect                         
+00012339  dhcpClientLinkChangeEvent             
+000123ad  ethCalcCrc                            
+00012421  ipv6RemovePrefix                      
+00012495  ipv6SetGlobalAddr                     
+00012509  msp432e4EthCalcCrc                    
+0001257d  ndpIsFirstHopRouter                   
+00012665  vPortValidateInterruptPriority        
+000126d9  ndpFlushQueuedPackets                 
+0001274b  nicSendPacket                         
+000127bd  ipv6RemoveDefaultRouter               
+0001290b  icmpv6ProcessPacketTooBig             
+00012979  igmpProcessMessage                    
+000129e9  ipv6SetLinkLocalAddr                  
+00012a55  ndpUpdateNextHop                      
+00012ac1  netInvokeLinkChangeCallback           
+00012b2d  socketClose                           
+00012b99  tcpStateClosing                       
+00012c03  udpUpdateEvents                       
+00012c6d  HOSTlseek                             
+00012cd5  HOSTrename                            
+00012d3d  __TI_decompress_lzss                  
+00012da5  ipv6GetAddrScope                      
+00012e0d  tcpFastRetransmit                     
+00012e75  icmpProcessMessage                    
+00012edb  ipv6IsOnLink                          
+00012f41  vListInsert                           
+00012fa7  xQueueGenericCreate                   
+0001300d  fprintf                               
+00013071  frexp                                 
+00013071  frexpl                                
+000130d5  fseek                                 
+00013139  ndpGetOption                          
+0001319d  ndpUpdatePrefixList                   
+00013265  __TI_wrt_ok                           
+000132c7  ipv4GetAddrScope                      
+00013329  mldTick                               
+0001338d  HOSTopen                              
+000133ed  IntDisable                            
+0001344d  IntEnable                             
+000134ad  igmpJoinGroup                         
+0001350d  ipv4Init                              
+0001356d  mldStartListening                     
+000135cd  modbusClientFormatMbapHeader          
+0001362d  pxPortInitialiseStack                 
+0001368d  tcpStateCloseWait                     
+000136ed  ipSelectSourceAddr                    
+0001374b  ipSendDatagram                        
+000137a9  close                                 
+00013805  igmpProcessReportMessage              
+00013861  ipv6FlushAddrList                     
+00013919  vQueueWaitForMessageRestricted        
+00013975  vTaskDelay                            
+000139d1  modbusClientParseWriteMultipleRegsResp
+00013a2b  ndpSelectNextHop                      
+00013a85  tcpCheckSyn                           
+00013ae1  HOSTread                              
+00013b39  HOSTwrite                             
+00013b91  dhcpClientStateBound                  
+00013be9  icmpUpdateInStats                     
+00013c41  icmpUpdateOutStats                    
+00013c99  ipv4SetHostAddr                       
+00013cf1  ipv6IsAnycastAddr                     
+00013d49  modbusClientParseMbapHeader           
+00013da1  msp432e4EthWritePhyReg                
+00013df9  ndpLinkChangeEvent                    
+00013e51  netBufferAlloc                        
+00013ea9  vPortSetupTimerInterrupt              
+00013f57  ipv4IsBroadcastAddr                   
+00013fad  ipv6FlushPrefixList                   
+00014001  ipv6SetDnsServer                      
+00014055  ltoa                                  
+000140a9  msp432e4EthReadPhyReg                 
+000140fd  netBufferAppend                       
+00014151  netBufferAt                           
+000141a5  slaacLinkChangeEvent                  
+000141f9  xTimerCreateTimerTask                 
+0001429f  ipStringToAddr                        
+000142f1  macAddrToEui64                        
+00014345  SysCtlPeripheralReset                 
+00014395  debugInit                             
+000143e5  dhcpClientCheckTimeout                
+00014435  ethPadFrame                           
+00014485  ipCalcUpperLayerChecksumEx            
+000144d5  ipIsUnspecifiedAddr                   
+00014525  ipv4AddrToString                      
+00014575  ipv6IsTentativeAddr                   
+000145c5  modbusClientFormatReadHoldingRegsReq  
+00014615  ndpFindNeighborCacheEntry             
+00014665  strSafeCopy                           
+000146b5  tcpGetDynamicPort                     
+00014705  tcpStateLastAck                       
+00014755  udpGetDynamicPort                     
+000147a5  ipv4MapMulticastAddrToMac             
+000147f3  ndpInit                               
+00014841  __TI_doflush                          
+0001488d  atoi                                  
+000148d9  ipv4SetDnsServer                      
+00014925  ipv6FlushDefaultRouterList            
+00014a09  tcpWaitForEvents                      
+00014a55  vPortEnterCritical                    
+00014aa1  arpFindEntry                          
+00014b35  exit                                  
+00014b7d  ioInit                                
+00014bc5  ipAddrToString                        
+00014c0d  memPoolAlloc                          
+00014c55  ndpFindDestCacheEntry                 
+00014c9d  nicUpdateMacAddrFilter                
+00014ce5  __aeabi_d2iz                          
+00014d2d  tcpIsDuplicateAck                     
+00014d75  uxListRemove                          
+00014dbd  ipv6GenerateLinkLocalAddr             
+00014e03  ipv6MapMulticastAddrToMac             
+00014e49  HOSTclose                             
+00014e8d  HOSTunlink                            
+00014ed1  __TI_auto_init_nobinit_nopinit        
+00014f15  dnsFlushCache                         
+00014f59  getdevice                             
+00014fe1  UARTConfigSetExpClk                   
+00015023  malloc                                
+00015065  tcpChangeState                        
+000150a9  netSetMacAddr                         
+000150e9  sprintf                               
+00015129  vTaskPlaceOnEventListRestricted       
+000151a7  osCreateEvent                         
+000151e5  SysCtlPeripheralReady                 
+00015221  arpFlushCache                         
+0001525d  debugStreamWrite                      
+00015299  dhcpClientStateInit                   
+000152d5  dhcpClientStateInitReboot             
+00015311  ipv4LinkChangeEvent                   
+0001534d  ipv6ComputeSolicitedNodeAddr          
+00015389  ndpCheckOptions                       
+000153c5  ndpFlushNeighborCache                 
+00015479  pvTaskGetThreadLocalStoragePointer    
+000154b5  strncasecmp                           
+000154f1  vListInsertEnd                        
+0001552d  arpFlushQueuedPackets                 
+00015567  osCreateTask                          
+000155a1  tcpFlushRetransmitQueue               
+000155dd  __TI_writemsg                         
+0001560b  C$$IO$$                               
+00015615  _c_int00_noargs                       
+0001564d  fputc                                 
+00015685  icmpv6ProcessDestUnreachable          
+000156bd  ipv4SetDefaultGateway                 
+000156f5  modbusClientInit                      
+0001572d  nicTick                               
+000157d5  dhcpClientComputeElapsedTime          
+0001580b  netBufferGetLength                    
+00015841  strncpy                               
+00015879  SysCtlPeripheralEnable                
+000158ad  __TI_cleanup                          
+000158e1  __TI_readmsg                          
+00015915  freopen                               
+00015949  ipv4GetBroadcastAddr                  
+0001597d  modbusClientGetResponsePdu            
+000159b1  netSetHostname                        
+000159e5  netSetInterfaceName                   
+00015a4d  vTaskPlaceOnEventList                 
+00015a81  vTaskSetThreadLocalStoragePointer     
+00015ab5  ipv4FlushFragQueue                    
+00015ae7  netGetRandRange                       
+00015b19  finddevice                            
+00015b49  ipAllocBuffer                         
+00015b79  ipv6FlushFragQueue                    
+00015ba9  msp432e4EthInitGpio                   
+00015bd9  tcpFastLossRecovery                   
+00015c09  tcpFlushSynQueue                      
+00015c39  udpInit                               
+00015c69  vListInitialise                       
+00015c99  vPortExitCritical                     
+00015cc9  xTaskGetSchedulerState                
+00015cf9  ethAllocBuffer                        
+00015d27  ipv6GetPathMtu                        
+00015d55  ipv6UpdatePathMtu                     
+00015d83  osWaitForEvent                        
+00015db1  __aeabi_i2d                           
+00015ddf  socketReceive                         
+00015e0d  socketSend                            
+00015e3b  strcasecmp                            
+00015e69  GPIODirModeSet                        
+00015e95  GPIOPinConfigure                      
+00015ec1  blinkTask                             
+00015eed  dnsDeleteEntry                        
+00015f19  ipv4SetSubnetMask                     
+00015f45  netSetDriver                          
+00015f71  strncmp                               
+00015f9d  swapInt32                             
+00015fc9  tcpTimerElapsed                       
+00015ff5  remove                                
+00015ff5  unlink                                
+00016021  userTask                              
+0001604d  xPortSysTickHandler                   
+00016079  xQueueCreateMutex                     
+000160a5  modbusClientDisconnect                
+000160f9  ethUpdateErrorStats                   
+00016121  lseek                                 
+00016149  modbusClientParseExceptionResp        
+00016171  msp432e4EthDumpPhyReg                 
+00016199  nbnsInit                              
+000161c1  socketSetTimeout                      
+000161e9  tcpDeleteControlBlock                 
+00016211  write                                 
+0001625f  tcpStateClosed                        
+00016285  udpAllocBuffer                        
+000162ad  IntPrioritySet                        
+000162d1  ethUpdateOutStats                     
+000162f5  igmpInit                              
+00016319  memcmp                                
+0001633d  memmove                               
+00016361  mldStopListening                      
+00016385  modbusClientDeinit                    
+000163a9  modbusClientGetExceptionCode          
+000163f1  swapInt16                             
+00016415  vQueueDelete                          
+00016439  vTaskInternalSetTimeOutState          
+0001645d  __aeabi_errno_addr                    
+0001647f  ipv4CheckSourceAddr                   
+000164a1  IntPriorityGroupingSet                
+000164c1  UARTDisable                           
+00016501  ethUpdateInStats                      
+00016521  ipv6GetMulticastAddrScope             
+00016541  memchr                                
+00016581  ipv4UpdateInStats                     
+0001659f  ipv4UpdateOutStats                    
+000165bd  ipv4FindHole                          
+000165d9  ipv6FindHole                          
+000165f5  memccpy                               
+00016611  modbusClientSetTimeout                
+0001662d  netInitRand                           
+00016649  osCreateMutex                         
+00016665  pvTaskIncrementMutexHeldCount         
+00016681  socketBindToInterface                 
+0001669d  tcpTimerStart                         
+000166b9  ipv6CheckSourceAddr                   
+000166ed  GPIOPinTypeGPIOOutput                 
+00016705  Power_idleFunc                        
+0001671d  SystemInit                            
+0001674d  arpInit                               
+00016765  dnsInit                               
+0001677d  free                                  
+00016795  strcmp                                
+000167ad  GPIOPinTypeEthernetLED                
+000167c3  GPIOPinTypeGPIOInput                  
+000167d9  GPIOPinTypeUART                       
+000167ef  PTLS_getBuf                           
+00016805  PTLS_setBuf                           
+0001681b  igmpRand                              
+00016831  ipv6UpdateInStats                     
+00016847  ipv6UpdateOutStats                    
+0001685d  mldRand                               
+00016873  ndpFlushDestCache                     
+00016889  osSetEventFromIsr                     
+0001689f  strchr                                
+000168b5  UARTEnable                            
+000168c9  copysign                              
+000168c9  copysignl                             
+000168dd  ethInit                               
+000168f1  ipv6FlushDnsServerList                
+00016905  netBufferFree                         
+00016919  osDeleteEvent                         
+0001692d  osReleaseMutex                        
+00016941  osSetEvent                            
+00016969  strcpy                                
+0001697d  strlen                                
+00016991  xTaskGetCurrentTaskHandle             
+000169a5  xTaskGetTickCount                     
+000169b9  ipv6ParseAuthHeader                   
+000169cb  ipv6ParseEspHeader                    
+000169dd  osAcquireMutex                        
+000169ef  wcslen                                
+00016a01  FPUEnable                             
+00016a11  debugStreamOpen                       
+00016a21  debugStreamRead                       
+00016a31  debugStreamSeek                       
+00016a41  isdigit                               
+00016a51  isupper                               
+00016a61  isxdigit                              
+00016a71  osAllocMem                            
+00016a81  osFreeMem                             
+00016a91  osResetEvent                          
+00016aa1  osResumeAllTasks                      
+00016ab1  osSuspendAllTasks                     
+00016ac1  tcpDumpHeader                         
+00016ad1  tcpInit                               
+00016ae1  tcpTimerStop                          
+00016af1  toupper                               
+00016b01  vListInitialiseItem                   
+00016b11  vTaskSuspendAll                       
+00016b21  debugStreamRename                     
+00016b2f  __TI_decompress_none                  
+00016b3d  modbusClientGetRequestPdu             
+00016b4b  modbusDumpRequestPdu                  
+00016b59  modbusDumpResponsePdu                 
+00016b67  tcpTimerRunning                       
+00016b75  Reset_Handler                         
+00016b81  debugStreamClose                      
+00016b8d  debugStreamUnlink                     
+00016b99  __TI_zero_init                        
+00016ba5  memPoolFree                           
+00016bb1  mldInit                               
+00016bbd  msp432e4EthDisableIrq                 
+00016bc9  msp432e4EthEnableIrq                  
+00016bd5  nicGetLogicalInterface                
+00016be1  nicGetPhysicalInterface               
+00016bed  osDelayTask                           
+00016bf9  osGetSystemTime                       
+00016c05  vTaskMissedYield                      
+00016c11  UARTCharPut                           
+00016c25  arpDumpPacket                         
+00016c2f  ethDumpHeader                         
+00016c39  icmpDumpEchoMessage                   
+00016c43  icmpDumpErrorMessage                  
+00016c4d  icmpDumpMessage                       
+00016c57  icmpv6DumpDestUnreachableMessage      
+00016c61  icmpv6DumpEchoMessage                 
+00016c6b  icmpv6DumpErrorMessage                
+00016c75  icmpv6DumpMessage                     
+00016c7f  icmpv6DumpPacketTooBigMessage         
+00016c89  igmpDumpMessage                       
+00016c93  ipv4DumpHeader                        
+00016c9d  ipv4DumpHoleList                      
+00016ca7  ipv6DumpHeader                        
+00016cb1  ipv6DumpHoleList                      
+00016cbb  mldDumpMessage                        
+00016cc5  msp432e4EthTick                       
+00016ccf  ndpDumpNeighborAdvMessage             
+00016cd9  ndpDumpNeighborSolMessage             
+00016ce3  ndpDumpRedirectMessage                
+00016ced  ndpDumpRouterAdvMessage               
+00016cf7  ndpDumpRouterSolMessage               
+00016d01  udpDumpHeader                         
+00016d0b  vPortSuppressTicksAndSleep            
+00016d15  netGetDefaultInterface                
+00016d1d  osStartKernel                         
+00016d25  GPIOPinRead                           
+00016d2b  GPIOPinWrite                          
+00016d39  _system_pre_init                      
+00016d3d  C$$EXIT                               
+00016d3d  abort                                 
+00016d41  memPoolInit                           
+00016ef4  _ctypes_                              
+0001713c  ethPadding                            
+0001717c  msp432e4EthDriver                     
+0001725c  IPV6_LINK_LOCAL_ADDR_PREFIX           
+0001726c  IPV6_LINK_LOCAL_ALL_NODES_ADDR        
+0001727c  IPV6_LINK_LOCAL_ALL_ROUTERS_ADDR      
+0001728c  IPV6_LOOPBACK_ADDR                    
+0001729c  IPV6_SOLICITED_NODE_ADDR_PREFIX       
+000172ac  IPV6_UNSPECIFIED_ADDR                 
+000172c8  ulMaxSyscallInterruptPriority         
+000172d8  dhcpOptionList                        
+000172df  MAC_BROADCAST_ADDR                    
+000172e5  MAC_UNSPECIFIED_ADDR                  
+00017464  __TI_Handler_Table_Base               
+00017470  __TI_Handler_Table_Limit              
+00017478  __TI_CINIT_Base                       
+00017488  __TI_CINIT_Limit                      
+20022400  socketTable                           
+20024cf8  netInterface                          
+20025904  dnsCache                              
+20025ca4  modbusClientContext                   
+20025ed8  __CIOBUF_                             
+200260b8  __TI_tmpnams                          
+20026158  udpCallbackTable                      
+200263e4  parmbuf                               
+200263f0  arpTickCounter                        
+200263f4  dhcpClientTickCounter                 
+200263f8  dnsTickCounter                        
+200263fc  igmpTickCounter                       
+20026400  ipv4FragTickCounter                   
+20026404  ipv6FragTickCounter                   
+20026408  mldTickCounter                        
+2002640c  ndpTickCounter                        
+20026410  netEvent                              
+20026414  netMutex                              
+20026418  netTaskHandle                         
+2002641c  nicTickCounter                        
+20026420  tcpTickCounter                        
+20026424  udpCallbackMutex                      
+20026430  __stack                               
+20026630  __STACK_TOP                           
+20026c30  PowerMSP432E4_module                  
+20026c30  __STACK_END                           
+20026d9c  _ftable                               
+20026e8c  _device                               
+20026f04  _stream                               
+20026f54  pxCurrentTCB                          
+20026fd4  __TI_ft_end                           
+20026fd8  __aeabi_stdin                         
+20026fdc  __aeabi_stdout                        
+20026fe0  __aeabi_stderr                        
+20026fe4  __TI_cleanup_ptr                      
+20026fe8  __TI_dtors_ptr                        
+20026fec  __TI_enable_exit_profile_output       
+20026ffc  _lock                                 
+20027000  _unlock                               
+20027010  SystemCoreClock                       
+ffffffff  __TI_pprof_out_hndl                   
+ffffffff  __TI_prof_data_size                   
+ffffffff  __TI_prof_data_start                  
+ffffffff  __binit__                             
+ffffffff  __c_args__                            
+ffffffff  binit                                 
+UNDEFED   __mpu_init                            
+UNDEFED   _system_post_cinit                    
+
+[784 symbols]
