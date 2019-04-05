@@ -1,0 +1,31 @@
+;*****************************************************************
+;* SAME70 linker scatter file (running code from internal FLASH) *
+;*****************************************************************
+
+LR_IROM1 0x00400000 0x200000
+{
+   ER_IROM1 0x00400000 0x200000
+   {
+      *.o (RESET, +First)
+      *(InRoot$$Sections)
+      .ANY (+RO)
+   }
+   
+   RW_IRAM1 0x20400000 0x57000
+   {
+      .ANY (+RW +ZI)
+   }
+   
+   ARM_LIB_STACK 0x20458000 EMPTY -0x1000
+   {
+   }
+   
+   RW_IRAM2 0x20458000 0x8000
+   {
+      .ANY (.ram_no_cache +RW +ZI)
+   }
+   
+   ARM_LIB_HEAP 0x70000000 EMPTY 0x200000
+   {
+   }
+}
