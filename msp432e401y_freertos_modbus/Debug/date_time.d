@@ -10,7 +10,7 @@ date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdef
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_types.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/string.h
 date_time.obj: C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/common/date_time.h
-date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/time.h
+date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/time.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stddef.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdint.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/stdint.h
@@ -19,9 +19,9 @@ date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/_std
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/time.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/abi_prefix.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/xlocale/_time.h
-date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/signal.h
-date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/sys/types.h
-date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/sys/_internal.h
+date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/signal.h
+date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/sys/types.h
+date_time.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/sys/_internal.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/signal.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/sys/timespec.h
 date_time.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/_timespec.h
@@ -53,7 +53,7 @@ C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/cdefs.h:
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/machine/_types.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/string.h: 
 C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/common/date_time.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/time.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/time.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stddef.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdint.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/stdint.h: 
@@ -62,9 +62,9 @@ C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/_stdint.h:
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/time.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/abi_prefix.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/xlocale/_time.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/signal.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/sys/types.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/ti/posix/ccs/sys/_internal.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/signal.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/sys/types.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/ti/posix/ccs/sys/_internal.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/signal.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/../include/sys/timespec.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/sys/_timespec.h: 

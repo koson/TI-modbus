@@ -79,8 +79,10 @@ struct _NetInterface;
  * If you fully understand and accept the terms of the GPL license, then edit
  * the os_port_config.h header and add the following directive:
  *
- * #define GPL_LICENSE_TERMS_ACCEPTED
+ * 
  */
+
+#define GPL_LICENSE_TERMS_ACCEPTED
 
 #ifndef GPL_LICENSE_TERMS_ACCEPTED
    #error Before compiling CycloneTCP Open, you must accept the terms of the GPL license

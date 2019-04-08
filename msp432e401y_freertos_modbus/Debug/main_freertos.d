@@ -14,9 +14,9 @@ main_freertos.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_ti_
 main_freertos.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h
 main_freertos.obj: C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdarg.h
 main_freertos.obj: C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/msp432e401y.h
-main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/core_cm4.h
-main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/cmsis_compiler.h
-main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/cmsis_ccs.h
+main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/core_cm4.h
+main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/cmsis_compiler.h
+main_freertos.obj: C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/cmsis_ccs.h
 main_freertos.obj: C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/system_msp432e401y.h
 main_freertos.obj: C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/driverlib/gpio.h
 main_freertos.obj: C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/driverlib/sysctl.h
@@ -98,9 +98,9 @@ C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/_ti_config.h:
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/linkage.h: 
 C:/ti/ccsv8/tools/compiler/ti-cgt-arm_18.1.2.LTS/include/stdarg.h: 
 C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/msp432e401y.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/core_cm4.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/cmsis_compiler.h: 
-C:/ti/simplelink_msp432e4_sdk_2_20_00_20/source/third_party/CMSIS/Include/cmsis_ccs.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/core_cm4.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/cmsis_compiler.h: 
+C:/ti/simplelink_msp432e4_sdk_2_30_00_14/source/third_party/CMSIS/Include/cmsis_ccs.h: 
 C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/system_msp432e401y.h: 
 C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/driverlib/gpio.h: 
 C:/ti/CycloneTCP_SSL_Crypto_Open_1_8_6/third_party/ti/devices/msp432e4/driverlib/sysctl.h: 
