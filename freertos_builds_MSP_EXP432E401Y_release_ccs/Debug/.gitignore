@@ -1,0 +1,6 @@
+/dpl/
+/freertos/
+/makefile
+/objects.mk
+/posix/
+/sources.mk
